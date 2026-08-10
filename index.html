@@ -58,10 +58,114 @@ button,a{font:inherit}.wrap{max-width:920px;margin:auto;padding:18px 14px 90px}.
 <section id="quiz" class="section"><div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">学習問題</div></div>
 <div class="card"><div class="score" id="score">0 / 0</div><div class="qnum" id="qnum"></div><div class="qtext" id="qtext"></div><div id="answers"></div><div class="explain" id="explain"></div><button class="next" id="next" onclick="nextQ()">次の問題</button></div></section>
 
-<section id="basics" class="section"><div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">ドラム基礎</div></div>
-<div class="card"><h3>乾燥方式だけで決めない</h3><p>「ヒートポンプ」「ヒーター」「ハイブリッド」など方式は重要。ただし実際の提案では、定格乾燥容量・消費電力量・標準時間・衣類への配慮・お手入れまで機種単位で確認する。</p></div>
-<div class="card"><h3>洗濯容量 ≠ 乾燥容量</h3><p>12kg洗える機種でも乾燥は6kgや7kgなど。家族分を一気に乾燥したいお客様には、洗濯容量より先に「1回に何kg乾かしたいか」を確認。</p></div>
-<div class="card"><h3>上位機種の差</h3><p>乾燥だけでなく、温水洗浄・自動投入・スマホ連携・清潔機能・操作パネル・自動お手入れなどが差になりやすい。</p></div></section>
+
+<section id="basics" class="section">
+<div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">ドラム基礎・乾燥方式</div></div>
+
+<div class="card">
+<h3>まず覚える：乾燥方式は4つに分けて考える</h3>
+<p>ドラム式の乾燥は、販売時には大きく <b>①ヒートポンプ式 ②ヒーター式（水冷除湿） ③ヒーター式（排気） ④ヒートポンプ＋ヒーターのハイブリッド式</b> に整理すると理解しやすい。</p>
+<p class="notice">メーカー独自名称は、この基本方式に独自の風路・制御・ヒーター・ドラム構造などを組み合わせたもの。名称だけで方式を判断しない。</p>
+</div>
+
+<div class="card">
+<h3>① ヒートポンプ乾燥</h3>
+<div class="pill">省エネ</div><div class="pill">低温乾燥</div><div class="pill">冷却水不要</div>
+<p><b>仕組み：</b>湿った空気から水分を取り除き、熱交換で再び温めた乾いた空気をドラムへ戻して循環させる。エアコンの除湿に近い考え方。</p>
+<div class="fact"><b>温度傾向</b><span>比較的低温。メーカー説明ではおおむね60℃前後など。</span></div>
+<div class="fact"><b>電気代</b><span>一般にヒーター式より低くしやすい。</span></div>
+<div class="fact"><b>衣類</b><span>低温風なので、縮み・傷みを抑えやすい。</span></div>
+<div class="fact"><b>水</b><span>乾燥時の除湿用冷却水を基本的に必要としない。</span></div>
+<div class="fact"><b>注意</b><span>ヒートポンプなら全部同じ性能ではない。風量・熱交換器・ドラム径・制御・乾燥経路で時間や仕上がりは変わる。</span></div>
+<div class="talk"><b>接客トーク</b><br>「毎日乾燥まで使うなら、まずヒートポンプ式を比較してみましょう。ヒーターで高温にする方式より省エネ性を出しやすく、衣類にも比較的やさしい乾燥です。」</div>
+</div>
+
+<div class="card">
+<h3>② ヒーター乾燥（水冷除湿タイプ）</h3>
+<div class="pill">ヒーター加熱</div><div class="pill">冷却水を使う方式あり</div>
+<p><b>仕組み：</b>ヒーターで温めた空気を衣類に当て、発生した湿気を冷却して水に戻し排水する方式。水道水で除湿用の冷却を行う機種がある。</p>
+<div class="fact"><b>温度傾向</b><span>ヒートポンプより高温になりやすい。</span></div>
+<div class="fact"><b>電気代</b><span>ヒートポンプ式より大きくなりやすい。</span></div>
+<div class="fact"><b>衣類</b><span>高温になる方式では、素材によって縮みや傷みに注意。</span></div>
+<div class="fact"><b>水</b><span>除湿のため冷却水を使うタイプがあるため、乾燥時にも水を使う。</span></div>
+<div class="fact"><b>メリット</b><span>構造や機種によっては本体価格を抑えたモデルにも採用しやすい。</span></div>
+<div class="talk"><b>接客トーク</b><br>「本体価格だけでなく、乾燥を毎日使うかを確認してください。頻繁に乾燥する場合は、購入価格だけでなくランニングコストも比較します。」</div>
+</div>
+
+<div class="card">
+<h3>③ ヒーター乾燥（排気タイプ）</h3>
+<div class="pill">ヒーター加熱</div><div class="pill">湿気を外へ排出</div>
+<p><b>仕組み：</b>ヒーターで温めた空気で乾かし、湿気を含んだ空気を機外へ排出する方式。</p>
+<div class="fact"><b>室内環境</b><span>機種・方式によって周囲へ熱や湿気の影響が出やすいため、換気が重要。</span></div>
+<div class="fact"><b>電気代</b><span>一般にヒートポンプ式より高くなりやすい。</span></div>
+<div class="fact"><b>衣類</b><span>高温乾燥では縮みや熱への弱さに注意。</span></div>
+<div class="fact"><b>ポイント</b><span>「ヒーター式」とだけ覚えず、水冷除湿か排気かまで確認する。</span></div>
+</div>
+
+<div class="card">
+<h3>④ ハイブリッド乾燥</h3>
+<div class="pill">ヒートポンプ</div><div class="pill">＋ヒーター補助</div>
+<p><b>考え方：</b>ヒートポンプ乾燥を基本に、必要な場面でヒーターの熱を加えるタイプ。SHARPの上位機では「ハイブリッド乾燥NEXT」として採用されている。</p>
+<div class="fact"><b>狙い</b><span>ヒートポンプの省エネ性を活かしながら、仕上げ時などに補助ヒーターを使って乾燥を調整する。</span></div>
+<div class="fact"><b>注意</b><span>「ハイブリッド＝必ず他方式より優秀」とは断定しない。実際の消費電力量・時間・容量で比較する。</span></div>
+<div class="talk"><b>接客トーク</b><br>「ヒートポンプだけでなく補助ヒーターも組み合わせる方式です。方式名だけではなく、実際の6kg乾燥時の電力量や時間まで見て比べましょう。」</div>
+</div>
+
+<div class="card">
+<h3>5社の代表的な乾燥方式</h3>
+<div class="model"><b>Panasonic LX</b><small>トップユニット式ヒートポンプ乾燥</small><div>ヒートポンプユニットを上部に配置した独自構成。LXシリーズの大きな軸。</div></div>
+<div class="model"><b>SHARP ES-12X1</b><small>ハイブリッド乾燥NEXT</small><div>ヒートポンプ乾燥＋サポートヒーター。SHARP全機種がこの方式ではない。</div></div>
+<div class="model"><b>東芝 XP5 / XH5 / XM5</b><small>ふんわリッチ速乾（ヒートポンプ除湿乾燥）</small><div>湿気を除湿して排水し、乾いた温風を循環させる。</div></div>
+<div class="model"><b>日立 BD-STX130M / SX130M</b><small>ヒートポンプ式＋らくはや 風アイロン</small><div>ヒートポンプ式に高速風・大風量を組み合わせてシワを伸ばす。</div></div>
+<div class="model"><b>AQUA DXS12A / DMS10A</b><small>ヒートポンプ乾燥</small><div>低温の乾いた空気で乾燥。まっ直ぐドラムによる衣類の広がりも特徴。</div></div>
+</div>
+
+<div class="card">
+<h3>重要：ヒートポンプなら全部同じ、ではない</h3>
+<p>同じヒートポンプ方式でも、次の違いで乾燥性能は変わる。</p>
+<ul class="install-list">
+<li><b>風量・風速：</b>衣類をどれだけ広げて温風を当てられるか</li>
+<li><b>ドラム径・形状：</b>衣類が舞いやすいか、絡みにくいか</li>
+<li><b>熱交換器：</b>除湿・再加熱の効率</li>
+<li><b>乾燥経路：</b>風路の太さやホコリ対策</li>
+<li><b>センサー：</b>湿度・温度・衣類量などをどう検知するか</li>
+<li><b>制御：</b>標準・省エネ・時短など運転方法</li>
+<li><b>乾燥容量：</b>6kgと7kgでは一度に乾かせる量が違う</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>接客で必ず見る5項目</h3>
+<ol class="install-list">
+<li><b>乾燥方式</b> — ヒートポンプ / ヒーター / ハイブリッド</li>
+<li><b>定格乾燥容量</b> — 6kgか7kgか等</li>
+<li><b>洗濯～乾燥の消費電力量</b> — Whで比較</li>
+<li><b>洗濯～乾燥時間</b> — 標準コースと省エネコースを分けて見る</li>
+<li><b>お手入れ</b> — 乾燥フィルター、熱交換器、乾燥ダクト、糸くずフィルター</li>
+</ol>
+<div class="talk"><b>販売のコツ</b><br>「ヒートポンプだからおすすめ」では弱い。<br><b>“毎日乾燥する → 電力量”“まとめて乾燥 → 容量”“アイロンを減らしたい → シワ”“掃除が面倒 → お手入れ”</b>までつなげる。</div>
+</div>
+
+<div class="card">
+<h3>間違えやすい説明</h3>
+<div class="warn"><b>×「ヒートポンプは乾燥中に水を一切使わない」</b><br>乾燥の除湿用冷却水を必要としない、という意味。洗濯～乾燥コース全体では当然給水する。</div>
+<div class="warn"><b>×「ヒーター式は全部水を使う」</b><br>水冷除湿タイプと排気タイプなどがある。方式を確認する。</div>
+<div class="warn"><b>×「低温なら絶対に縮まない」</b><br>衣類の素材や取扱表示、量、コースによって縮み・傷みは起こり得る。</div>
+<div class="warn"><b>×「ヒートポンプならメーカー差はない」</b><br>風量・ドラム・熱交換・制御・お手入れ構造で大きく異なる。</div>
+<div class="warn"><b>×「ハイブリッドが必ず一番省エネ」</b><br>方式名ではなく、対象機種の実測基準の消費電力量・時間で比較する。</div>
+</div>
+
+<div class="card">
+<h3>超簡単に覚えるなら</h3>
+<p><b>ヒートポンプ：</b>「除湿して熱を再利用 → 省エネ・低温」</p>
+<p><b>ヒーター：</b>「電熱で直接あたためる → 高温になりやすい」</p>
+<p><b>ハイブリッド：</b>「ヒートポンプ＋必要に応じてヒーター補助」</p>
+</div>
+
+<div class="card">
+<p class="notice">基礎説明はPanasonic、SHARP、東芝、日立、AQUA各社の公式説明を照合して作成。温度・電力量・時間は機種やコースにより異なるため、販売時は対象型番の公式仕様表で確認してください。</p>
+</div>
+</section>
 
 <section id="install" class="section"><div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">設置チェック</div></div>
 <div class="card"><ul class="install-list">
@@ -73,7 +177,7 @@ button,a{font:inherit}.wrap{max-width:920px;margin:auto;padding:18px 14px 90px}.
 <li><b>前方スペース：</b>ドア開閉＋洗濯物の出し入れ</li>
 <li><b>排水：</b>排水ホースの取り回し</li>
 </ul><p class="notice">実際の設置可否はメーカーの据付説明書・販売店の工事基準で最終確認してください。</p></div></section>
-<div class="footer">Ver.1.1 / 情報基準日 2026-08-10 / メーカー公式情報を基に作成</div>
+<div class="footer">Ver.1.2 / 情報基準日 2026-08-10 / メーカー公式情報を基に作成</div>
 </main>
 <script>
 let DB, quiz=[], qi=0, good=0, answered=false;
