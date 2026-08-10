@@ -12,6 +12,13 @@
 button,a{font:inherit}.wrap{max-width:920px;margin:auto;padding:18px 14px 90px}.hero{background:linear-gradient(135deg,#116ec4,#55b6df);border-radius:26px;padding:24px;color:white;box-shadow:0 14px 35px #267bb52e;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:180px;height:180px;border:24px solid #ffffff22;border-radius:50%;right:-55px;top:-45px}
 .logo{font-size:13px;font-weight:800;letter-spacing:.12em;opacity:.88}.hero h1{font-size:27px;margin:6px 0 4px}.hero p{margin:0;opacity:.9}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin:14px 0}.menu{border:0;background:var(--card);border-radius:19px;padding:18px 14px;text-align:left;box-shadow:0 7px 22px #204a6514;color:var(--ink)}.menu b{display:block;font-size:17px;margin-bottom:5px}.menu span{font-size:12px;color:var(--muted)}.section{display:none}.section.active{display:block}.topbar{display:flex;align-items:center;gap:10px;margin:4px 0 14px}.back{border:0;background:white;border-radius:13px;padding:10px 13px;box-shadow:0 3px 12px #22485d14}.title{font-weight:800;font-size:21px}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:17px;margin:10px 0;box-shadow:0 5px 20px #1a4c6c0c}.makerHead{display:flex;gap:12px;align-items:center}.dot{width:12px;height:42px;border-radius:10px}.makerHead h3{margin:0;font-size:21px}.catch{font-size:13px;color:var(--muted);margin-top:2px}.pill{display:inline-block;background:#edf7ff;color:#166bb2;padding:7px 10px;border-radius:99px;font-size:12px;font-weight:700;margin:4px 4px 0 0}.points{padding-left:20px;margin-bottom:4px}.points li{margin:8px 0;line-height:1.55}.model{border-top:1px solid var(--line);padding:11px 0}.model:first-child{border-top:0}.model b{display:block}.model small{color:var(--muted)}.talk{background:#f1f8fd;border-radius:14px;padding:13px;line-height:1.55;margin-top:10px}.src{font-size:12px;color:#607b8b}.src a{color:#1676cf}.diagnose label{display:block;font-weight:700;margin:15px 0 7px}.choice{display:flex;flex-wrap:wrap;gap:8px}.choice button{border:1px solid var(--line);background:white;border-radius:99px;padding:9px 12px}.choice button.sel{background:#1877cd;color:white;border-color:#1877cd}.result{margin-top:17px;padding:15px;background:#eef8ff;border-radius:16px}.qnum{font-size:12px;color:var(--muted);font-weight:700}.qtext{font-size:18px;font-weight:800;line-height:1.5;margin:7px 0 14px}.answer{width:100%;text-align:left;border:1px solid var(--line);background:white;padding:13px;border-radius:14px;margin:7px 0}.answer.correct{background:#e9f8f2;border-color:#67b99a}.answer.wrong{background:#fff0f0;border-color:#e08b8b}.explain{display:none;margin:12px 0;padding:13px;border-radius:14px;background:#f4f7f9;line-height:1.5}.next{border:0;background:#1676cf;color:white;border-radius:13px;padding:11px 17px;font-weight:800;display:none}.score{font-weight:800}.notice{font-size:12px;color:var(--muted);line-height:1.5}.compareTabs{display:flex;gap:7px;overflow:auto;padding-bottom:5px}.tab{white-space:nowrap;border:1px solid var(--line);background:white;border-radius:99px;padding:8px 11px}.tab.sel{background:#173f59;color:white}.fact{display:flex;gap:10px;padding:9px 0;border-top:1px solid var(--line)}.fact:first-child{border:0}.fact b{min-width:90px}.install-list li{margin:9px 0;line-height:1.5}.footer{font-size:11px;text-align:center;color:#8396a1;padding:20px}
 @media(min-width:700px){.grid{grid-template-columns:repeat(4,1fr)}.hero{padding:30px}.hero h1{font-size:34px}}
+
+.crossrow{background:white;border:1px solid var(--line);border-radius:18px;padding:14px;margin:10px 0}
+.crossaxis{font-weight:800;font-size:16px;margin-bottom:10px}
+.crossgrid{display:grid;grid-template-columns:repeat(5,minmax(145px,1fr));gap:8px;overflow:auto}
+.crosscell{background:#f7fafc;border-radius:12px;padding:10px;min-width:145px;line-height:1.4}
+.crosscell b{display:block;font-size:12px;color:#55717f;margin-bottom:5px}
+.warn{background:#fff8e8;border:1px solid #f0d494;border-radius:12px;padding:10px;margin:8px 0;font-size:13px;line-height:1.5}
 </style>
 </head>
 <body><main class="wrap">
@@ -19,6 +26,7 @@ button,a{font:inherit}.wrap{max-width:920px;margin:auto;padding:18px 14px 90px}.
 <div class="hero"><div class="logo">RISA EDITION</div><h1>ドラム式洗濯機<br>販買マスター</h1><p>5社比較 × 接客 × 学習</p></div>
 <div class="grid">
 <button class="menu" onclick="openSec('makers')"><b>メーカー攻略</b><span>5社の強みを比較</span></button>
+<button class="menu" onclick="openSec('cross')"><b>5社徹底比較</b><span>容量・乾燥・洗浄・お手入れ</span></button>
 <button class="menu" onclick="openSec('compare')"><b>シリーズ比較</b><span>上位〜ベーシック</span></button>
 <button class="menu" onclick="openSec('diagnose')"><b>接客ナビ</b><span>お客様タイプから絞る</span></button>
 <button class="menu" onclick="openSec('quiz')"><b>学習問題</b><span>ランダム出題</span></button>
@@ -30,6 +38,13 @@ button,a{font:inherit}.wrap{max-width:920px;margin:auto;padding:18px 14px 90px}.
 
 <section id="makers" class="section"><div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">メーカー攻略</div></div><div id="makerCards"></div></section>
 <section id="compare" class="section"><div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">シリーズ比較</div></div><div class="compareTabs" id="tabs"></div><div id="compareBody"></div></section>
+
+
+<section id="cross" class="section"><div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">5社徹底比較</div></div>
+<div class="card"><b>比較の見方</b><p class="notice">メーカー全体を一括りにせず、代表上位モデルを軸に比較しています。機能が全機種共通でない場合は対象型番を明記しています。</p></div>
+<div id="crossBody"></div>
+<div class="card"><h3>間違えやすいポイント</h3><div id="accuracyNotes"></div></div>
+</section>
 
 <section id="diagnose" class="section"><div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">接客ナビ</div></div>
 <div class="card diagnose">
@@ -58,16 +73,21 @@ button,a{font:inherit}.wrap{max-width:920px;margin:auto;padding:18px 14px 90px}.
 <li><b>前方スペース：</b>ドア開閉＋洗濯物の出し入れ</li>
 <li><b>排水：</b>排水ホースの取り回し</li>
 </ul><p class="notice">実際の設置可否はメーカーの据付説明書・販売店の工事基準で最終確認してください。</p></div></section>
-<div class="footer">情報基準日 2026-08-10 / メーカー公式情報を基に作成</div>
+<div class="footer">Ver.1.1 / 情報基準日 2026-08-10 / メーカー公式情報を基に作成</div>
 </main>
 <script>
 let DB, quiz=[], qi=0, good=0, answered=false;
-async function init(){DB=await fetch('data.json').then(r=>r.json()); renderMakers(); renderTabs(); setupDiag(); buildQuiz();}
+async function init(){DB=await fetch('data.json').then(r=>r.json()); renderMakers(); renderTabs(); renderCross(); setupDiag(); buildQuiz();}
 function home(){document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));document.getElementById('home').classList.add('active');scrollTo(0,0)}
 function openSec(id){document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');scrollTo(0,0);if(id==='quiz')showQ()}
 function renderMakers(){document.getElementById('makerCards').innerHTML=DB.makers.map(m=>`<div class="card"><div class="makerHead"><span class="dot" style="background:${m.accent}"></span><div><h3>${m.name}</h3><div class="catch">${m.catch}</div></div></div><div>${m.best.map(x=>`<span class="pill">${x}</span>`).join('')}</div><ul class="points">${m.points.map(x=>`<li>${x}</li>`).join('')}</ul><div class="talk"><b>接客トーク</b><br>${m.talk}</div><p class="src">公式：<a href="${m.source}" target="_blank" rel="noopener">メーカー情報を確認</a></p></div>`).join('')}
 function renderTabs(){let t=document.getElementById('tabs');t.innerHTML=DB.makers.map((m,i)=>`<button class="tab ${i===0?'sel':''}" onclick="showCompare(${i},this)">${m.short}</button>`).join('');showCompare(0,t.children[0])}
 function showCompare(i,el){document.querySelectorAll('.tab').forEach(x=>x.classList.remove('sel'));if(el)el.classList.add('sel');let m=DB.makers[i];document.getElementById('compareBody').innerHTML=`<div class="card"><div class="makerHead"><span class="dot" style="background:${m.accent}"></span><div><h3>${m.name}</h3><div class="catch">${m.catch}</div></div></div><div style="margin-top:12px">${m.models.map(x=>`<div class="model"><b>${x[0]}　${x[1]}</b><small>${x[2]}</small><div>${x[3]}</div></div>`).join('')}</div><p class="notice">「機種仕様確認」とした項目は、販売時に現行カタログ・公式仕様表で必ず確認してください。</p></div>`}
+function renderCross(){
+ const makers=['Panasonic','SHARP','東芝','日立','AQUA'];
+ document.getElementById('crossBody').innerHTML=DB.cross_compare.map(r=>`<div class="crossrow"><div class="crossaxis">${r.axis}</div><div class="crossgrid">${makers.map(m=>`<div class="crosscell"><b>${m}</b>${r[m]}</div>`).join('')}</div></div>`).join('');
+ document.getElementById('accuracyNotes').innerHTML=DB.accuracy_notes.map(x=>`<div class="warn">${x}</div>`).join('');
+}
 function setupDiag(){let selected={};document.querySelectorAll('.choice button').forEach(b=>b.onclick=()=>{[...b.parentElement.children].forEach(x=>x.classList.remove('sel'));b.classList.add('sel');selected[b.parentElement.id]=b.dataset.v;diagnose(selected)})}
 function diagnose(s){if(!s.needs)return;let map={energy:['Panasonic','SHARP','東芝'],care:['日立','東芝'],capacity:['日立','東芝'],size:['AQUA','Panasonic'],wash:['東芝','Panasonic','SHARP'],wrinkle:['日立','東芝']};let names=map[s.needs]||[];if(s.dryfreq==='daily' && !names.includes('Panasonic')) names.push('Panasonic');let cards=names.slice(0,3).map(n=>DB.makers.find(m=>m.name===n)).filter(Boolean);document.getElementById('diagResult').innerHTML=`<div class="result"><b>まず比較したい候補</b>${cards.map((m,i)=>`<p><b>${i+1}. ${m.name}</b><br><span class="notice">${m.catch}</span></p>`).join('')}<p class="notice">これは入口の絞り込みです。最終提案は設置条件・容量・現行機種・予算まで確認してください。</p></div>`}
 function buildQuiz(){quiz=[...DB.quiz].sort(()=>Math.random()-.5);qi=0;good=0}
