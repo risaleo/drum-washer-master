@@ -125,6 +125,21 @@ button{cursor:pointer}
 @media(min-width:700px){
  .grid{grid-template-columns:repeat(4,1fr)}.hero{min-height:310px}.hero h1{font-size:38px}.hero-img{width:38%}
 }
+
+.visual-grid{display:grid;gap:12px}
+@media(min-width:780px){.visual-grid{grid-template-columns:repeat(2,1fr)}}
+.type-card,.chart-card,.simple-card{background:linear-gradient(135deg,#fff,#f3fbff);border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 8px 22px rgba(44,113,153,.08)}
+.type-top{display:flex;align-items:center;gap:12px;margin-bottom:8px}.type-icon{width:52px;height:52px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(145deg,#e9f8ff,#dff2ff);font-size:28px}.type-card h3{margin:0;font-size:19px}.type-card p{margin:8px 0 10px;line-height:1.6}
+.tagrow{display:flex;flex-wrap:wrap;gap:6px}
+.chart-title{font-weight:900;font-size:18px;margin-bottom:12px}
+.barcmp{display:grid;gap:10px}
+.barline{display:grid;grid-template-columns:95px 1fr 85px;align-items:center;gap:10px}.barlabel{font-weight:800;color:#0f5686}.track{height:14px;border-radius:999px;background:#e8f4fb;position:relative;overflow:hidden;border:1px solid #d7ebf6}.bar{height:100%;border-radius:999px;background:linear-gradient(90deg,#1a8ef0,#5ec9f2)}.bar.alt{background:linear-gradient(90deg,#7fbef5,#b0e2ff)}
+.flowbox{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.flowchip{padding:9px 11px;border-radius:14px;background:#edf8ff;border:1px solid #d8edf9;font-weight:800;font-size:12px}.flowarrow{font-weight:900;color:#198eef}
+.matrix{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.matrix .mini{padding:13px;border-radius:18px;background:linear-gradient(135deg,#fafdff,#eef8ff);border:1px solid #dbeef8}.mini b{display:block;font-size:15px;margin-bottom:6px}.mini small{color:#627e8e;line-height:1.5}
+@media(min-width:780px){.matrix{grid-template-columns:repeat(4,1fr)}}
+.maker-visual{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}.strengths{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.strength{background:linear-gradient(180deg,#f9fdff,#eef9ff);border:1px solid #dfedf7;border-radius:16px;padding:10px;text-align:center}.strength .sicon{font-size:20px;margin-bottom:5px}.strength b{font-size:13px;display:block}.strength span{font-size:11px;color:#688190}
+.brand-ladder{display:grid;gap:10px}.ladder-row{display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:center}.ladder-row b{font-size:13px;color:#0f5686}.steps{display:flex;gap:6px;flex-wrap:wrap}.step{padding:7px 10px;border-radius:999px;background:#eef8ff;border:1px solid #d8edf8;font-size:12px;font-weight:800}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.legend .pill{margin:0}
 </style>
 
 </head>
@@ -150,7 +165,7 @@ button{cursor:pointer}
 <button class="menu" onclick="openSec('basics')"><span class="mi">🫧</span><b>ドラム基礎</b><span>容量・洗浄・乾燥の基本</span></button>
 <button class="menu" onclick="openSec('install')"><span class="mi">📋</span><b>設置チェック</b><span>搬入・防水パン・蛇口まで</span></button>
 <button class="menu" onclick="openSec('dryviz')"><span class="mi">♨️</span><b>乾燥方式図解</b><span>ヒートポンプ等を図解で理解</span></button>
-<button class="menu" onclick="openSec('diagnose')"><span class="mi">💡</span><b>おすすめ提案</b><span>用途別の提案ポイントを確認</span></button>
+<button class="menu" onclick="openSec('visuals')"><span class="mi">🗂️</span><b>図解で選ぶ</b><span>タイプ別に見やすく整理</span></button>
 </div>
 
 <div class="basic-card">
@@ -169,9 +184,31 @@ button{cursor:pointer}
 
 
 <section id="cross" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">5社徹底比較</div></div>
-<div class="card"><b>比較の見方</b><p class="notice">メーカー全体を一括りにせず、代表上位モデルを軸に比較しています。機能が全機種共通でない場合は対象型番を明記しています。</p></div>
+<div class="card"><b>比較の見方</b><p class="notice">メーカー全体を一括りにせず、代表上位モデルを軸に比較しています。機能が全機種共通でない場合は対象型番を明記しています。</p><div class="legend"><span class="pill">Panasonic＝省エネ・便利機能</span><span class="pill">東芝/日立＝7kg乾燥</span><span class="pill">日立＝らくメンテ</span><span class="pill">AQUA＝設置性</span></div></div>
+<div class="chart-card"><div class="chart-title">ひと目で分かる容量イメージ</div><div class="barcmp"><div class="barline"><div class="barlabel">6kg帯</div><div class="track"><div class="bar alt" style="width:85%"></div></div><div>パナ/SHARP/AQUA</div></div><div class="barline"><div class="barlabel">7kg帯</div><div class="track"><div class="bar" style="width:100%"></div></div><div>東芝/日立</div></div></div></div>
 <div id="crossBody"></div>
 <div class="card"><h3>間違えやすいポイント</h3><div id="accuracyNotes"></div></div>
+</section>
+
+
+<section id="visuals" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">図解で選ぶ</div></div>
+<div class="card"><h3 style="margin-top:0">お客様タイプから選ぶ早見図</h3><p class="notice">文字を読む前に、まず「どんな使い方か」で候補を絞ると分かりやすい。</p><div id="diagramReco" class="visual-grid"></div></div>
+<div class="chart-card"><div class="chart-title">乾燥容量のイメージ比較</div><div class="barcmp">
+<div class="barline"><div class="barlabel">Panasonic</div><div class="track"><div class="bar" style="width:86%"></div></div><div>6kg</div></div>
+<div class="barline"><div class="barlabel">SHARP</div><div class="track"><div class="bar alt" style="width:86%"></div></div><div>6kg</div></div>
+<div class="barline"><div class="barlabel">東芝</div><div class="track"><div class="bar" style="width:100%"></div></div><div>7kg</div></div>
+<div class="barline"><div class="barlabel">日立</div><div class="track"><div class="bar" style="width:100%"></div></div><div>7kg</div></div>
+<div class="barline"><div class="barlabel">AQUA</div><div class="track"><div class="bar alt" style="width:86%"></div></div><div>6kg中心</div></div>
+</div><p class="notice">※代表モデルの比較イメージ。機種によって異なるため、販売時は対象型番を確認。</p></div>
+<div class="card"><h3 style="margin-top:0">5社の立ち位置を一言で図解</h3><div class="matrix">
+<div class="mini"><b>Panasonic</b><small>毎日乾燥派<br>省エネ・便利機能のバランス型</small></div>
+<div class="mini"><b>SHARP</b><small>省エネ重視派<br>最上位のハイブリッド乾燥が特徴</small></div>
+<div class="mini"><b>東芝</b><small>大容量乾燥派<br>7kg乾燥・UFB・低騒音</small></div>
+<div class="mini"><b>日立</b><small>メンテ楽派<br>らくメンテ・風アイロン・13kg</small></div>
+<div class="mini"><b>AQUA</b><small>設置性重視派<br>コンパクト・まっ直ぐドラム</small></div>
+<div class="mini"><b>比較のコツ</b><small>方式だけでなく<br>容量・時間・お手入れまで確認</small></div>
+</div></div>
+<div class="simple-card"><div class="chart-title">迷った時の決め方 3ステップ</div><div class="flowbox"><span class="flowchip">① 置けるか確認</span><span class="flowarrow">→</span><span class="flowchip">② 乾燥頻度を確認</span><span class="flowarrow">→</span><span class="flowchip">③ お手入れの好みで絞る</span></div></div>
 </section>
 
 <section id="diagnose" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">接客ナビ</div></div>
@@ -194,6 +231,7 @@ button{cursor:pointer}
 <h3>まず覚える：乾燥方式は4つに分けて考える</h3>
 <p>ドラム式の乾燥は、販売時には大きく <b>①ヒートポンプ式 ②ヒーター式（水冷除湿） ③ヒーター式（排気） ④ヒートポンプ＋ヒーターのハイブリッド式</b> に整理すると理解しやすい。</p>
 <p class="notice">メーカー独自名称は、この基本方式に独自の風路・制御・ヒーター・ドラム構造などを組み合わせたもの。名称だけで方式を判断しない。</p>
+<div class="matrix"><div class="mini"><b>ヒートポンプ</b><small>省エネ・低温・毎日乾燥向き</small></div><div class="mini"><b>ヒーター</b><small>高温になりやすい・方式確認が大切</small></div><div class="mini"><b>ハイブリッド</b><small>ヒートポンプ＋補助ヒーター</small></div><div class="mini"><b>比較軸</b><small>方式＋容量＋時間＋お手入れ</small></div></div>
 </div>
 
 <div class="card">
@@ -340,14 +378,22 @@ button{cursor:pointer}
 <li><b>前方スペース：</b>ドア開閉＋洗濯物の出し入れ</li>
 <li><b>排水：</b>排水ホースの取り回し</li>
 </ul><p class="notice">実際の設置可否はメーカーの据付説明書・販売店の工事基準で最終確認してください。</p></div></section>
-<div class="footer">Ver.1.3 / 情報基準日 2026-08-10 / メーカー公式情報を基に作成</div>
+<div class="footer">Ver.1.4 / 情報基準日 2026-08-12 / メーカー公式情報を基に作成</div>
 </main>
 <script>
 let DB, quiz=[], qi=0, good=0, answered=false;
-async function init(){DB=await fetch('data.json').then(r=>r.json()); renderMakers(); renderTabs(); renderCross(); setupDiag(); buildQuiz();}
+async function init(){DB=await fetch('data.json').then(r=>r.json()); renderMakers(); renderTabs(); renderCross(); renderDiagramReco(); setupDiag(); buildQuiz();}
 function home(){document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));document.getElementById('home').classList.add('active');scrollTo(0,0)}
 function openSec(id){document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');scrollTo(0,0);if(id==='quiz')showQ()}
-function renderMakers(){document.getElementById('makerCards').innerHTML=DB.makers.map(m=>`<div class="card"><div class="makerHead"><span class="dot" style="background:${m.accent}"></span><div><h3>${m.name}</h3><div class="catch">${m.catch}</div></div></div><div>${m.best.map(x=>`<span class="pill">${x}</span>`).join('')}</div><ul class="points">${m.points.map(x=>`<li>${x}</li>`).join('')}</ul><div class="talk"><b>接客トーク</b><br>${m.talk}</div><p class="src">公式：<a href="${m.source}" target="_blank" rel="noopener">メーカー情報を確認</a></p></div>`).join('')}
+const MAKER_VISUAL={
+Panasonic:[['💧','ヒートポンプ','毎日乾燥と相性◎'],['⚙️','便利機能','温水・自動投入・アプリ'],['🌿','省エネ','ランニングコスト比較向き']],
+SHARP:[['✨','ハイブリッド','最上位の乾燥方式が特徴'],['🚿','高圧洗浄','マイクロ高圧洗浄'],['🫧','清潔性','清潔機能を比較しやすい']],
+東芝:[['7️⃣','7kg乾燥','家族分をまとめて乾燥'],['🌀','UFB洗浄','洗浄力の説明がしやすい'],['🔈','低騒音','低振動・低騒音']],
+日立:[['🧰','らくメンテ','乾燥フィルターなし'],['👔','風アイロン','シワを抑えたい方向け'],['📦','13kg/7kg','大容量モデル']],
+AQUA:[['📏','コンパクト','奥行き重視で見やすい'],['🏠','設置性','搬入や置き場の相談向き'],['🫧','自動おそうじ','手間を減らしたい方向け']]
+};
+function renderMakers(){document.getElementById('makerCards').innerHTML=DB.makers.map(m=>`<div class="card"><div class="makerHead"><span class="dot" style="background:${m.accent}"></span><div><h3>${m.name}</h3><div class="catch">${m.catch}</div></div></div><div>${m.best.map(x=>`<span class="pill">${x}</span>`).join('')}</div><div class="maker-visual"><div class="strengths">${(MAKER_VISUAL[m.name]||[]).map(s=>`<div class="strength"><div class="sicon">${s[0]}</div><b>${s[1]}</b><span>${s[2]}</span></div>`).join('')}</div><div class="brand-ladder"><div class="ladder-row"><b>選び方の順番</b><div class="steps"><span class="step">置けるか</span><span class="step">乾燥頻度</span><span class="step">容量</span><span class="step">お手入れ</span></div></div></div></div><ul class="points">${m.points.map(x=>`<li>${x}</li>`).join('')}</ul><div class="talk"><b>接客トーク</b><br>${m.talk}</div><p class="src">公式：<a href="${m.source}" target="_blank" rel="noopener">メーカー情報を確認</a></p></div>`).join('')}
+function renderDiagramReco(){document.getElementById('diagramReco').innerHTML=(DB.diagram_reco||[]).map(r=>`<div class="type-card"><div class="type-top"><div class="type-icon">${r.icon}</div><div><h3>${r.title}</h3><div class="notice">こんなお客様に</div></div></div><p>${r.text}</p><div class="tagrow">${r.tags.map(t=>`<span class="pill">${t}</span>`).join('')}</div></div>`).join('')}
 function renderTabs(){let t=document.getElementById('tabs');t.innerHTML=DB.makers.map((m,i)=>`<button class="tab ${i===0?'sel':''}" onclick="showCompare(${i},this)">${m.short}</button>`).join('');showCompare(0,t.children[0])}
 function showCompare(i,el){document.querySelectorAll('.tab').forEach(x=>x.classList.remove('sel'));if(el)el.classList.add('sel');let m=DB.makers[i];document.getElementById('compareBody').innerHTML=`<div class="card"><div class="makerHead"><span class="dot" style="background:${m.accent}"></span><div><h3>${m.name}</h3><div class="catch">${m.catch}</div></div></div><div style="margin-top:12px">${m.models.map(x=>`<div class="model"><b>${x[0]}　${x[1]}</b><small>${x[2]}</small><div>${x[3]}</div></div>`).join('')}</div><p class="notice">「機種仕様確認」とした項目は、販売時に現行カタログ・公式仕様表で必ず確認してください。</p></div>`}
 function renderCross(){
