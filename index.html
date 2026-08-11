@@ -140,6 +140,14 @@ button{cursor:pointer}
 .maker-visual{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}.strengths{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.strength{background:linear-gradient(180deg,#f9fdff,#eef9ff);border:1px solid #dfedf7;border-radius:16px;padding:10px;text-align:center}.strength .sicon{font-size:20px;margin-bottom:5px}.strength b{font-size:13px;display:block}.strength span{font-size:11px;color:#688190}
 .brand-ladder{display:grid;gap:10px}.ladder-row{display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:center}.ladder-row b{font-size:13px;color:#0f5686}.steps{display:flex;gap:6px;flex-wrap:wrap}.step{padding:7px 10px;border-radius:999px;background:#eef8ff;border:1px solid #d8edf8;font-size:12px;font-weight:800}
 .legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.legend .pill{margin:0}
+
+.ver-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,#0c6dd8,#2aa8f4);color:#fff;font-size:12px;font-weight:900;box-shadow:0 6px 16px rgba(20,123,206,.2)}
+.topbar .ver-badge{margin-left:auto}.hero .ver-badge{margin-top:10px}
+.diagram-wrap{background:linear-gradient(180deg,#fbfeff,#eef9ff);border:1px solid #d9edf8;border-radius:22px;padding:12px;margin:12px 0 14px;overflow:hidden}
+.diagram-svg{width:100%;height:auto;display:block}
+.diagram-legend{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.legend-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border-radius:999px;background:#fff;border:1px solid #d9edf8;font-size:11px;font-weight:800}.legend-dot{width:9px;height:9px;border-radius:50%}
+.dry-summary{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}.dry-summary .mini{padding:10px;border-radius:14px;background:#f7fcff;border:1px solid #dceef8}.dry-summary b{display:block;font-size:12px;color:#0f5686}.dry-summary span{font-size:13px;font-weight:800}
+@media(min-width:720px){.dry-summary{grid-template-columns:repeat(4,1fr)}}
 </style>
 
 </head>
@@ -150,7 +158,7 @@ button{cursor:pointer}
   <div class="hero-copy">
     <div class="logo">RISA EDITION</div>
     <h1>ドラム式洗濯機<br>販買マスター</h1>
-    <div class="edition">Risa Edition <span class="spark">✦</span></div>
+    <div class="edition">Risa Edition <span class="spark">✦</span></div><div class="ver-badge">Ver.1.5</div>
     <p>知識をチカラに、提案を価値に。<br>お客様に最適な一台を。</p>
   </div>
   <img class="hero-img" src="icon-512.png" alt="">
@@ -179,11 +187,11 @@ button{cursor:pointer}
 </section>
 
 
-<section id="makers" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">メーカー攻略</div></div><div id="makerCards"></div></section>
-<section id="compare" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">シリーズ比較</div></div><div class="compareTabs" id="tabs"></div><div id="compareBody"></div></section>
+<section id="makers" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">メーカー攻略</div><div class="ver-badge">Ver.1.5</div></div><div id="makerCards"></div></section>
+<section id="compare" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">シリーズ比較</div><div class="ver-badge">Ver.1.5</div></div><div class="compareTabs" id="tabs"></div><div id="compareBody"></div></section>
 
 
-<section id="cross" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">5社徹底比較</div></div>
+<section id="cross" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">5社徹底比較</div><div class="ver-badge">Ver.1.5</div></div>
 <div class="card"><b>比較の見方</b><p class="notice">メーカー全体を一括りにせず、代表上位モデルを軸に比較しています。機能が全機種共通でない場合は対象型番を明記しています。</p><div class="legend"><span class="pill">Panasonic＝省エネ・便利機能</span><span class="pill">東芝/日立＝7kg乾燥</span><span class="pill">日立＝らくメンテ</span><span class="pill">AQUA＝設置性</span></div></div>
 <div class="chart-card"><div class="chart-title">ひと目で分かる容量イメージ</div><div class="barcmp"><div class="barline"><div class="barlabel">6kg帯</div><div class="track"><div class="bar alt" style="width:85%"></div></div><div>パナ/SHARP/AQUA</div></div><div class="barline"><div class="barlabel">7kg帯</div><div class="track"><div class="bar" style="width:100%"></div></div><div>東芝/日立</div></div></div></div>
 <div id="crossBody"></div>
@@ -191,7 +199,7 @@ button{cursor:pointer}
 </section>
 
 
-<section id="visuals" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">図解で選ぶ</div></div>
+<section id="visuals" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">図解で選ぶ</div><div class="ver-badge">Ver.1.5</div></div>
 <div class="card"><h3 style="margin-top:0">お客様タイプから選ぶ早見図</h3><p class="notice">文字を読む前に、まず「どんな使い方か」で候補を絞ると分かりやすい。</p><div id="diagramReco" class="visual-grid"></div></div>
 <div class="chart-card"><div class="chart-title">乾燥容量のイメージ比較</div><div class="barcmp">
 <div class="barline"><div class="barlabel">Panasonic</div><div class="track"><div class="bar" style="width:86%"></div></div><div>6kg</div></div>
@@ -211,7 +219,7 @@ button{cursor:pointer}
 <div class="simple-card"><div class="chart-title">迷った時の決め方 3ステップ</div><div class="flowbox"><span class="flowchip">① 置けるか確認</span><span class="flowarrow">→</span><span class="flowchip">② 乾燥頻度を確認</span><span class="flowarrow">→</span><span class="flowchip">③ お手入れの好みで絞る</span></div></div>
 </section>
 
-<section id="diagnose" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">接客ナビ</div></div>
+<section id="diagnose" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">接客ナビ</div><div class="ver-badge">Ver.1.5</div></div>
 <div class="card diagnose">
 <p>お客様の希望を選ぶと、比較を始めやすいメーカーを表示します。</p>
 <label>一番重視すること</label><div class="choice" id="needs">
@@ -220,12 +228,12 @@ button{cursor:pointer}
 <label>乾燥は？</label><div class="choice" id="dryfreq"><button data-v="daily">ほぼ毎日</button><button data-v="sometimes">時々</button></div>
 <div id="diagResult"></div></div></section>
 
-<section id="quiz" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">学習問題</div></div>
+<section id="quiz" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">学習問題</div><div class="ver-badge">Ver.1.5</div></div>
 <div class="card"><div class="score" id="score">0 / 0</div><div class="qnum" id="qnum"></div><div class="qtext" id="qtext"></div><div id="answers"></div><div class="explain" id="explain"></div><button class="next" id="next" onclick="nextQ()">次の問題</button></div></section>
 
 
 <section id="basics" class="section">
-<div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">ドラム基礎・乾燥方式</div></div>
+<div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">ドラム基礎・乾燥方式</div><div class="ver-badge">Ver.1.5</div></div>
 
 <div class="card">
 <h3>まず覚える：乾燥方式は4つに分けて考える</h3>
@@ -235,7 +243,21 @@ button{cursor:pointer}
 </div>
 
 <div class="card">
-<h3>① ヒートポンプ乾燥</h3>
+<h3>① ヒートポンプ乾燥</h3><div class="diagram-wrap">
+<svg class="diagram-svg" viewBox="0 0 760 320" role="img" aria-label="ヒートポンプ式乾燥の仕組み">
+<defs><marker id="ab" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1a8ff0"/></marker><marker id="ao" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#f28b28"/></marker></defs>
+<rect x="12" y="10" width="736" height="300" rx="24" fill="#f8fdff" stroke="#cfe9f7"/>
+<g transform="translate(55,72)"><rect x="0" y="0" width="155" height="180" rx="24" fill="#fff" stroke="#8ecdf2" stroke-width="3"/><circle cx="78" cy="95" r="55" fill="#e9f7ff" stroke="#318fd3" stroke-width="5"/><circle cx="78" cy="95" r="40" fill="#bfe8ff"/><path d="M45 100 Q78 70 112 100 Q78 125 45 100" fill="#fff" opacity=".85"/><text x="78" y="210" text-anchor="middle" font-size="18" font-weight="700" fill="#12364e">ドラム</text></g>
+<g transform="translate(295,70)"><rect width="150" height="125" rx="18" fill="#eef8ff" stroke="#4b9fdb" stroke-width="3"/><path d="M25 35 h100 M25 55 h100 M25 75 h100 M25 95 h100" stroke="#6e95aa" stroke-width="8"/><text x="75" y="-10" text-anchor="middle" font-size="18" font-weight="700" fill="#12364e">熱交換器</text><text x="75" y="145" text-anchor="middle" font-size="14" fill="#4f7184">湿気を結露→排水</text></g>
+<g transform="translate(530,70)"><rect width="135" height="125" rx="18" fill="#fff4e8" stroke="#f28b28" stroke-width="3"/><path d="M28 35 C50 15 82 55 104 35 C82 58 50 18 28 55 C50 35 82 75 104 55 C82 78 50 38 28 75 C50 55 82 95 104 75" fill="none" stroke="#f28b28" stroke-width="8"/><text x="68" y="-10" text-anchor="middle" font-size="18" font-weight="700" fill="#12364e">再加熱</text><text x="68" y="145" text-anchor="middle" font-size="14" fill="#4f7184">乾いた温風</text></g>
+<path d="M210 125 C245 125 258 125 292 125" stroke="#1a8ff0" stroke-width="7" fill="none" marker-end="url(#ab)"/><text x="250" y="105" text-anchor="middle" font-size="14" font-weight="700" fill="#1a8ff0">湿った空気</text>
+<path d="M445 125 C475 125 492 125 527 125" stroke="#f28b28" stroke-width="7" fill="none" marker-end="url(#ao)"/>
+<path d="M598 195 C600 270 165 285 135 230" stroke="#1a8ff0" stroke-width="7" fill="none" marker-end="url(#ab)"/><text x="370" y="288" text-anchor="middle" font-size="14" font-weight="700" fill="#1a8ff0">乾いた空気を循環</text>
+<path d="M365 195 v55" stroke="#1a8ff0" stroke-width="6" marker-end="url(#ab)"/><path d="M346 250 q19 25 38 0 q-19 45 -38 0" fill="#43aef3"/><text x="405" y="250" font-size="14" fill="#24526c">排水</text>
+</svg>
+<div class="diagram-legend"><span class="legend-chip"><span class="legend-dot" style="background:#1a8ff0"></span>湿気・循環空気</span><span class="legend-chip"><span class="legend-dot" style="background:#f28b28"></span>温風・再加熱</span></div>
+<div class="dry-summary"><div class="mini"><b>温度</b><span>比較的低温</span></div><div class="mini"><b>省エネ</b><span>◎</span></div><div class="mini"><b>衣類</b><span>やさしめ</span></div><div class="mini"><b>冷却水</b><span>基本不要</span></div></div>
+</div>
 <div class="pill">省エネ</div><div class="pill">低温乾燥</div><div class="pill">冷却水不要</div>
 <p><b>仕組み：</b>湿った空気から水分を取り除き、熱交換で再び温めた乾いた空気をドラムへ戻して循環させる。エアコンの除湿に近い考え方。</p>
 <div class="fact"><b>温度傾向</b><span>比較的低温。メーカー説明ではおおむね60℃前後など。</span></div>
@@ -247,7 +269,19 @@ button{cursor:pointer}
 </div>
 
 <div class="card">
-<h3>② ヒーター乾燥（水冷除湿タイプ）</h3>
+<h3>② ヒーター乾燥（水冷除湿タイプ）</h3><div class="diagram-wrap">
+<svg class="diagram-svg" viewBox="0 0 760 320" role="img" aria-label="ヒーター式水冷除湿乾燥の仕組み">
+<defs><marker id="hb" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1a8ff0"/></marker><marker id="ho" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#f06f2b"/></marker></defs>
+<rect x="12" y="10" width="736" height="300" rx="24" fill="#fffdf9" stroke="#f1dfcf"/>
+<g transform="translate(45,75)"><rect width="150" height="170" rx="24" fill="#fff" stroke="#e8a46e" stroke-width="3"/><circle cx="75" cy="88" r="53" fill="#fff1e6" stroke="#ef7a32" stroke-width="5"/><path d="M45 95 Q75 68 105 95 Q75 120 45 95" fill="#fff"/><text x="75" y="202" text-anchor="middle" font-size="18" font-weight="700">ドラム</text></g>
+<g transform="translate(260,70)"><rect width="130" height="120" rx="18" fill="#fff1e8" stroke="#f06f2b" stroke-width="3"/><path d="M25 30 C45 10 70 50 100 30 C75 55 45 15 25 55 C45 35 75 75 100 55 C75 80 45 40 25 80" fill="none" stroke="#f06f2b" stroke-width="8"/><text x="65" y="-10" text-anchor="middle" font-size="18" font-weight="700">ヒーター</text></g>
+<g transform="translate(500,70)"><rect width="150" height="120" rx="18" fill="#eaf7ff" stroke="#2b91d0" stroke-width="3"/><path d="M30 35 h90 M30 58 h90 M30 81 h90" stroke="#6caed8" stroke-width="9"/><path d="M75 90 q22 28 44 0 q-22 48 -44 0" fill="#43aef3"/><text x="75" y="-10" text-anchor="middle" font-size="18" font-weight="700">冷却器</text><text x="75" y="145" text-anchor="middle" font-size="14" fill="#4f7184">水冷除湿</text></g>
+<path d="M195 125 C220 125 235 125 257 125" stroke="#1a8ff0" stroke-width="7" fill="none" marker-end="url(#hb)"/><path d="M390 125 C430 125 455 125 497 125" stroke="#f06f2b" stroke-width="7" fill="none" marker-end="url(#ho)"/><text x="445" y="105" text-anchor="middle" font-size="14" font-weight="700" fill="#f06f2b">高温の湿風</text>
+<path d="M575 190 C575 265 165 280 120 240" stroke="#1a8ff0" stroke-width="7" fill="none" marker-end="url(#hb)"/><text x="360" y="285" text-anchor="middle" font-size="14" font-weight="700" fill="#1a8ff0">除湿した空気を循環</text>
+<path d="M575 190 v55" stroke="#1a8ff0" stroke-width="6" marker-end="url(#hb)"/><text x="610" y="245" font-size="14" fill="#24526c">排水</text>
+</svg>
+<div class="dry-summary"><div class="mini"><b>温度</b><span>高温になりやすい</span></div><div class="mini"><b>省エネ</b><span>△</span></div><div class="mini"><b>衣類</b><span>熱に注意</span></div><div class="mini"><b>冷却水</b><span>使うタイプあり</span></div></div>
+</div>
 <div class="pill">ヒーター加熱</div><div class="pill">冷却水を使う方式あり</div>
 <p><b>仕組み：</b>ヒーターで温めた空気を衣類に当て、発生した湿気を冷却して水に戻し排水する方式。水道水で除湿用の冷却を行う機種がある。</p>
 <div class="fact"><b>温度傾向</b><span>ヒートポンプより高温になりやすい。</span></div>
@@ -259,7 +293,17 @@ button{cursor:pointer}
 </div>
 
 <div class="card">
-<h3>③ ヒーター乾燥（排気タイプ）</h3>
+<h3>③ ヒーター乾燥（排気タイプ）</h3><div class="diagram-wrap">
+<svg class="diagram-svg" viewBox="0 0 760 280" role="img" aria-label="ヒーター式排気乾燥の仕組み">
+<defs><marker id="eb" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1a8ff0"/></marker><marker id="eo" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#ef6d2d"/></marker></defs>
+<rect x="12" y="10" width="736" height="260" rx="24" fill="#fbfff9" stroke="#d8edd2"/>
+<g transform="translate(65,60)"><rect width="160" height="165" rx="24" fill="#fff" stroke="#72b66c" stroke-width="3"/><circle cx="80" cy="88" r="54" fill="#f1fbef" stroke="#5fa75c" stroke-width="5"/><text x="80" y="198" text-anchor="middle" font-size="18" font-weight="700">ドラム</text></g>
+<g transform="translate(300,68)"><rect width="135" height="110" rx="18" fill="#fff3e9" stroke="#ef6d2d" stroke-width="3"/><path d="M28 28 C48 8 72 48 105 28 C75 53 48 13 28 53 C48 33 75 73 105 53 C75 78 48 38 28 78" fill="none" stroke="#ef6d2d" stroke-width="8"/><text x="68" y="-10" text-anchor="middle" font-size="18" font-weight="700">ヒーター</text></g>
+<path d="M225 115 C255 115 268 115 297 115" stroke="#1a8ff0" stroke-width="7" fill="none" marker-end="url(#eb)"/><path d="M435 115 C500 115 530 115 610 115" stroke="#ef6d2d" stroke-width="7" fill="none" marker-end="url(#eo)"/><text x="525" y="92" text-anchor="middle" font-size="14" font-weight="700" fill="#ef6d2d">湿った温風を排気</text>
+<path d="M620 85 q28 30 0 60 q28 30 0 60" fill="none" stroke="#9ea9ae" stroke-width="12" opacity=".65"/><text x="650" y="220" font-size="14" fill="#526a78">室内へ熱・湿気</text>
+</svg>
+<div class="dry-summary"><div class="mini"><b>温度</b><span>高温</span></div><div class="mini"><b>省エネ</b><span>△</span></div><div class="mini"><b>室内影響</b><span>熱・湿気に注意</span></div><div class="mini"><b>構造</b><span>シンプル</span></div></div>
+</div>
 <div class="pill">ヒーター加熱</div><div class="pill">湿気を外へ排出</div>
 <p><b>仕組み：</b>ヒーターで温めた空気で乾かし、湿気を含んだ空気を機外へ排出する方式。</p>
 <div class="fact"><b>室内環境</b><span>機種・方式によって周囲へ熱や湿気の影響が出やすいため、換気が重要。</span></div>
@@ -269,7 +313,19 @@ button{cursor:pointer}
 </div>
 
 <div class="card">
-<h3>④ ハイブリッド乾燥</h3>
+<h3>④ ハイブリッド乾燥</h3><div class="diagram-wrap">
+<svg class="diagram-svg" viewBox="0 0 760 300" role="img" aria-label="ハイブリッド乾燥の仕組み">
+<defs><marker id="yb" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1a8ff0"/></marker><marker id="yo" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#f06f2b"/></marker></defs>
+<rect x="12" y="10" width="736" height="280" rx="24" fill="#fcf9ff" stroke="#e5d8f3"/>
+<g transform="translate(40,65)"><rect width="150" height="165" rx="24" fill="#fff" stroke="#8a65c9" stroke-width="3"/><circle cx="75" cy="88" r="52" fill="#f4edff" stroke="#7555b4" stroke-width="5"/><text x="75" y="198" text-anchor="middle" font-size="18" font-weight="700">ドラム</text></g>
+<g transform="translate(290,52)"><rect width="150" height="95" rx="18" fill="#eaf7ff" stroke="#2b91d0" stroke-width="3"/><circle cx="45" cy="48" r="25" fill="#cfeeff"/><path d="M45 22 v52 M19 48 h52" stroke="#2b91d0" stroke-width="8"/><text x="75" y="-8" text-anchor="middle" font-size="18" font-weight="700">ヒートポンプ</text></g>
+<g transform="translate(290,172)"><rect width="150" height="72" rx="18" fill="#fff1e8" stroke="#f06f2b" stroke-width="3"/><path d="M26 35 C48 12 75 58 118 35" fill="none" stroke="#f06f2b" stroke-width="9"/><text x="75" y="100" text-anchor="middle" font-size="14" fill="#4f7184">補助ヒーター</text></g>
+<path d="M190 115 C235 115 245 95 287 95" stroke="#1a8ff0" stroke-width="7" fill="none" marker-end="url(#yb)"/><path d="M190 160 C235 160 245 205 287 205" stroke="#f06f2b" stroke-width="7" fill="none" marker-end="url(#yo)"/>
+<path d="M440 95 C510 95 510 145 605 145" stroke="#1a8ff0" stroke-width="7" fill="none" marker-end="url(#yb)"/><path d="M440 205 C520 205 520 165 605 165" stroke="#f06f2b" stroke-width="7" fill="none" marker-end="url(#yo)"/>
+<rect x="605" y="118" width="105" height="78" rx="18" fill="#fff" stroke="#8a65c9" stroke-width="3"/><text x="657" y="148" text-anchor="middle" font-size="16" font-weight="700">状況に応じて</text><text x="657" y="173" text-anchor="middle" font-size="16" font-weight="700">使い分け</text>
+</svg>
+<div class="dry-summary"><div class="mini"><b>基本</b><span>ヒートポンプ</span></div><div class="mini"><b>補助</b><span>ヒーター</span></div><div class="mini"><b>狙い</b><span>効率＋仕上がり</span></div><div class="mini"><b>比較</b><span>電力量・時間で確認</span></div></div>
+</div>
 <div class="pill">ヒートポンプ</div><div class="pill">＋ヒーター補助</div>
 <p><b>考え方：</b>ヒートポンプ乾燥を基本に、必要な場面でヒーターの熱を加えるタイプ。SHARPの上位機では「ハイブリッド乾燥NEXT」として採用されている。</p>
 <div class="fact"><b>狙い</b><span>ヒートポンプの省エネ性を活かしながら、仕上げ時などに補助ヒーターを使って乾燥を調整する。</span></div>
@@ -335,7 +391,7 @@ button{cursor:pointer}
 
 
 <section id="dryviz" class="section">
-<div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">乾燥方式図解</div></div>
+<div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">乾燥方式図解</div><div class="ver-badge">Ver.1.5</div></div>
 <div class="dryhero">
   <div class="logo">DRYING SYSTEM</div>
   <h2 style="font-family:Georgia,'Yu Mincho',serif;margin:6px 0;font-size:28px">仕組みの違いをやさしく理解</h2>
@@ -343,32 +399,79 @@ button{cursor:pointer}
 </div>
 <div class="drygrid">
   <div class="drycard">
-    <div class="drytitle"><span class="num">1</span>ヒートポンプ式</div>
+    <div class="drytitle"><span class="num">1</span>ヒートポンプ式</div><div class="diagram-wrap">
+<svg class="diagram-svg" viewBox="0 0 760 320" role="img" aria-label="ヒートポンプ式乾燥の仕組み">
+<defs><marker id="ab" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1a8ff0"/></marker><marker id="ao" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#f28b28"/></marker></defs>
+<rect x="12" y="10" width="736" height="300" rx="24" fill="#f8fdff" stroke="#cfe9f7"/>
+<g transform="translate(55,72)"><rect x="0" y="0" width="155" height="180" rx="24" fill="#fff" stroke="#8ecdf2" stroke-width="3"/><circle cx="78" cy="95" r="55" fill="#e9f7ff" stroke="#318fd3" stroke-width="5"/><circle cx="78" cy="95" r="40" fill="#bfe8ff"/><path d="M45 100 Q78 70 112 100 Q78 125 45 100" fill="#fff" opacity=".85"/><text x="78" y="210" text-anchor="middle" font-size="18" font-weight="700" fill="#12364e">ドラム</text></g>
+<g transform="translate(295,70)"><rect width="150" height="125" rx="18" fill="#eef8ff" stroke="#4b9fdb" stroke-width="3"/><path d="M25 35 h100 M25 55 h100 M25 75 h100 M25 95 h100" stroke="#6e95aa" stroke-width="8"/><text x="75" y="-10" text-anchor="middle" font-size="18" font-weight="700" fill="#12364e">熱交換器</text><text x="75" y="145" text-anchor="middle" font-size="14" fill="#4f7184">湿気を結露→排水</text></g>
+<g transform="translate(530,70)"><rect width="135" height="125" rx="18" fill="#fff4e8" stroke="#f28b28" stroke-width="3"/><path d="M28 35 C50 15 82 55 104 35 C82 58 50 18 28 55 C50 35 82 75 104 55 C82 78 50 38 28 75 C50 55 82 95 104 75" fill="none" stroke="#f28b28" stroke-width="8"/><text x="68" y="-10" text-anchor="middle" font-size="18" font-weight="700" fill="#12364e">再加熱</text><text x="68" y="145" text-anchor="middle" font-size="14" fill="#4f7184">乾いた温風</text></g>
+<path d="M210 125 C245 125 258 125 292 125" stroke="#1a8ff0" stroke-width="7" fill="none" marker-end="url(#ab)"/><text x="250" y="105" text-anchor="middle" font-size="14" font-weight="700" fill="#1a8ff0">湿った空気</text>
+<path d="M445 125 C475 125 492 125 527 125" stroke="#f28b28" stroke-width="7" fill="none" marker-end="url(#ao)"/>
+<path d="M598 195 C600 270 165 285 135 230" stroke="#1a8ff0" stroke-width="7" fill="none" marker-end="url(#ab)"/><text x="370" y="288" text-anchor="middle" font-size="14" font-weight="700" fill="#1a8ff0">乾いた空気を循環</text>
+<path d="M365 195 v55" stroke="#1a8ff0" stroke-width="6" marker-end="url(#ab)"/><path d="M346 250 q19 25 38 0 q-19 45 -38 0" fill="#43aef3"/><text x="405" y="250" font-size="14" fill="#24526c">排水</text>
+</svg>
+<div class="diagram-legend"><span class="legend-chip"><span class="legend-dot" style="background:#1a8ff0"></span>湿気・循環空気</span><span class="legend-chip"><span class="legend-dot" style="background:#f28b28"></span>温風・再加熱</span></div>
+<div class="dry-summary"><div class="mini"><b>温度</b><span>比較的低温</span></div><div class="mini"><b>省エネ</b><span>◎</span></div><div class="mini"><b>衣類</b><span>やさしめ</span></div><div class="mini"><b>冷却水</b><span>基本不要</span></div></div>
+</div>
     <div class="flow"><span>湿った空気</span><b class="arrow">→</b><span>除湿・熱交換</span><b class="arrow">→</b><span>乾いた温風</span><b class="arrow">→</b><span>衣類へ循環</span></div>
     <p>空気中の湿気を取り除き、熱を再利用しながら乾燥。比較的低温で、省エネ性を出しやすい。</p>
     <div><span class="pill">省エネ</span><span class="pill">低温乾燥</span><span class="pill">衣類にやさしい</span></div>
   </div>
   <div class="drycard">
-    <div class="drytitle"><span class="num">2</span>ヒーター式（水冷除湿）</div>
+    <div class="drytitle"><span class="num">2</span>ヒーター式（水冷除湿）</div><div class="diagram-wrap">
+<svg class="diagram-svg" viewBox="0 0 760 320" role="img" aria-label="ヒーター式水冷除湿乾燥の仕組み">
+<defs><marker id="hb" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1a8ff0"/></marker><marker id="ho" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#f06f2b"/></marker></defs>
+<rect x="12" y="10" width="736" height="300" rx="24" fill="#fffdf9" stroke="#f1dfcf"/>
+<g transform="translate(45,75)"><rect width="150" height="170" rx="24" fill="#fff" stroke="#e8a46e" stroke-width="3"/><circle cx="75" cy="88" r="53" fill="#fff1e6" stroke="#ef7a32" stroke-width="5"/><path d="M45 95 Q75 68 105 95 Q75 120 45 95" fill="#fff"/><text x="75" y="202" text-anchor="middle" font-size="18" font-weight="700">ドラム</text></g>
+<g transform="translate(260,70)"><rect width="130" height="120" rx="18" fill="#fff1e8" stroke="#f06f2b" stroke-width="3"/><path d="M25 30 C45 10 70 50 100 30 C75 55 45 15 25 55 C45 35 75 75 100 55 C75 80 45 40 25 80" fill="none" stroke="#f06f2b" stroke-width="8"/><text x="65" y="-10" text-anchor="middle" font-size="18" font-weight="700">ヒーター</text></g>
+<g transform="translate(500,70)"><rect width="150" height="120" rx="18" fill="#eaf7ff" stroke="#2b91d0" stroke-width="3"/><path d="M30 35 h90 M30 58 h90 M30 81 h90" stroke="#6caed8" stroke-width="9"/><path d="M75 90 q22 28 44 0 q-22 48 -44 0" fill="#43aef3"/><text x="75" y="-10" text-anchor="middle" font-size="18" font-weight="700">冷却器</text><text x="75" y="145" text-anchor="middle" font-size="14" fill="#4f7184">水冷除湿</text></g>
+<path d="M195 125 C220 125 235 125 257 125" stroke="#1a8ff0" stroke-width="7" fill="none" marker-end="url(#hb)"/><path d="M390 125 C430 125 455 125 497 125" stroke="#f06f2b" stroke-width="7" fill="none" marker-end="url(#ho)"/><text x="445" y="105" text-anchor="middle" font-size="14" font-weight="700" fill="#f06f2b">高温の湿風</text>
+<path d="M575 190 C575 265 165 280 120 240" stroke="#1a8ff0" stroke-width="7" fill="none" marker-end="url(#hb)"/><text x="360" y="285" text-anchor="middle" font-size="14" font-weight="700" fill="#1a8ff0">除湿した空気を循環</text>
+<path d="M575 190 v55" stroke="#1a8ff0" stroke-width="6" marker-end="url(#hb)"/><text x="610" y="245" font-size="14" fill="#24526c">排水</text>
+</svg>
+<div class="dry-summary"><div class="mini"><b>温度</b><span>高温になりやすい</span></div><div class="mini"><b>省エネ</b><span>△</span></div><div class="mini"><b>衣類</b><span>熱に注意</span></div><div class="mini"><b>冷却水</b><span>使うタイプあり</span></div></div>
+</div>
     <div class="flow"><span>湿った空気</span><b class="arrow">→</b><span>ヒーター加熱</span><b class="arrow">→</b><span>高温の温風</span><b class="arrow">→</b><span>冷却・排水</span></div>
     <p>ヒーターで温風を作って乾燥。水冷除湿タイプでは、湿気を水に戻すため乾燥中にも冷却水を使う。</p>
     <div><span class="pill">高温になりやすい</span><span class="pill">方式確認が重要</span></div>
   </div>
   <div class="drycard">
-    <div class="drytitle"><span class="num">3</span>ハイブリッド式</div>
+    <div class="drytitle"><span class="num">3</span>ハイブリッド式</div><div class="diagram-wrap">
+<svg class="diagram-svg" viewBox="0 0 760 300" role="img" aria-label="ハイブリッド乾燥の仕組み">
+<defs><marker id="yb" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1a8ff0"/></marker><marker id="yo" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#f06f2b"/></marker></defs>
+<rect x="12" y="10" width="736" height="280" rx="24" fill="#fcf9ff" stroke="#e5d8f3"/>
+<g transform="translate(40,65)"><rect width="150" height="165" rx="24" fill="#fff" stroke="#8a65c9" stroke-width="3"/><circle cx="75" cy="88" r="52" fill="#f4edff" stroke="#7555b4" stroke-width="5"/><text x="75" y="198" text-anchor="middle" font-size="18" font-weight="700">ドラム</text></g>
+<g transform="translate(290,52)"><rect width="150" height="95" rx="18" fill="#eaf7ff" stroke="#2b91d0" stroke-width="3"/><circle cx="45" cy="48" r="25" fill="#cfeeff"/><path d="M45 22 v52 M19 48 h52" stroke="#2b91d0" stroke-width="8"/><text x="75" y="-8" text-anchor="middle" font-size="18" font-weight="700">ヒートポンプ</text></g>
+<g transform="translate(290,172)"><rect width="150" height="72" rx="18" fill="#fff1e8" stroke="#f06f2b" stroke-width="3"/><path d="M26 35 C48 12 75 58 118 35" fill="none" stroke="#f06f2b" stroke-width="9"/><text x="75" y="100" text-anchor="middle" font-size="14" fill="#4f7184">補助ヒーター</text></g>
+<path d="M190 115 C235 115 245 95 287 95" stroke="#1a8ff0" stroke-width="7" fill="none" marker-end="url(#yb)"/><path d="M190 160 C235 160 245 205 287 205" stroke="#f06f2b" stroke-width="7" fill="none" marker-end="url(#yo)"/>
+<path d="M440 95 C510 95 510 145 605 145" stroke="#1a8ff0" stroke-width="7" fill="none" marker-end="url(#yb)"/><path d="M440 205 C520 205 520 165 605 165" stroke="#f06f2b" stroke-width="7" fill="none" marker-end="url(#yo)"/>
+<rect x="605" y="118" width="105" height="78" rx="18" fill="#fff" stroke="#8a65c9" stroke-width="3"/><text x="657" y="148" text-anchor="middle" font-size="16" font-weight="700">状況に応じて</text><text x="657" y="173" text-anchor="middle" font-size="16" font-weight="700">使い分け</text>
+</svg>
+<div class="dry-summary"><div class="mini"><b>基本</b><span>ヒートポンプ</span></div><div class="mini"><b>補助</b><span>ヒーター</span></div><div class="mini"><b>狙い</b><span>効率＋仕上がり</span></div><div class="mini"><b>比較</b><span>電力量・時間で確認</span></div></div>
+</div>
     <div class="flow"><span>ヒートポンプ</span><b class="arrow">＋</b><span>補助ヒーター</span><b class="arrow">→</b><span>状況に応じて制御</span></div>
     <p>ヒートポンプを基本に、必要に応じてヒーターを組み合わせる方式。方式名だけでなく実際の電力量・時間で比較する。</p>
     <div><span class="pill">ヒートポンプ＋補助</span><span class="pill">機種差を確認</span></div>
   </div>
-</div>
-<div class="card"><h3 style="margin-top:0">接客ポイント</h3>
+</div><div class="drycard"><div class="drytitle"><span class="num">4</span>ヒーター式（排気）</div><div class="diagram-wrap">
+<svg class="diagram-svg" viewBox="0 0 760 280" role="img" aria-label="ヒーター式排気乾燥の仕組み">
+<defs><marker id="eb" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1a8ff0"/></marker><marker id="eo" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#ef6d2d"/></marker></defs>
+<rect x="12" y="10" width="736" height="260" rx="24" fill="#fbfff9" stroke="#d8edd2"/>
+<g transform="translate(65,60)"><rect width="160" height="165" rx="24" fill="#fff" stroke="#72b66c" stroke-width="3"/><circle cx="80" cy="88" r="54" fill="#f1fbef" stroke="#5fa75c" stroke-width="5"/><text x="80" y="198" text-anchor="middle" font-size="18" font-weight="700">ドラム</text></g>
+<g transform="translate(300,68)"><rect width="135" height="110" rx="18" fill="#fff3e9" stroke="#ef6d2d" stroke-width="3"/><path d="M28 28 C48 8 72 48 105 28 C75 53 48 13 28 53 C48 33 75 73 105 53 C75 78 48 38 28 78" fill="none" stroke="#ef6d2d" stroke-width="8"/><text x="68" y="-10" text-anchor="middle" font-size="18" font-weight="700">ヒーター</text></g>
+<path d="M225 115 C255 115 268 115 297 115" stroke="#1a8ff0" stroke-width="7" fill="none" marker-end="url(#eb)"/><path d="M435 115 C500 115 530 115 610 115" stroke="#ef6d2d" stroke-width="7" fill="none" marker-end="url(#eo)"/><text x="525" y="92" text-anchor="middle" font-size="14" font-weight="700" fill="#ef6d2d">湿った温風を排気</text>
+<path d="M620 85 q28 30 0 60 q28 30 0 60" fill="none" stroke="#9ea9ae" stroke-width="12" opacity=".65"/><text x="650" y="220" font-size="14" fill="#526a78">室内へ熱・湿気</text>
+</svg>
+<div class="dry-summary"><div class="mini"><b>温度</b><span>高温</span></div><div class="mini"><b>省エネ</b><span>△</span></div><div class="mini"><b>室内影響</b><span>熱・湿気に注意</span></div><div class="mini"><b>構造</b><span>シンプル</span></div></div>
+</div><p>ヒーターで温めた空気をドラムへ送り、湿った温風を機外へ排出する方式。周囲への熱・湿気の影響も確認する。</p><div><span class="pill">高温</span><span class="pill">排気</span><span class="pill">室内環境に注意</span></div></div><div class="card"><h3 style="margin-top:0">接客ポイント</h3>
 <div class="basic-item"><span class="check">1</span><div><b>乾燥方式だけで決めない</b><br><span class="notice">方式は入口。容量・時間・電力量まで見る。</span></div></div>
 <div class="basic-item"><span class="check">2</span><div><b>毎日乾燥ならランニングコスト</b><br><span class="notice">本体価格だけでなく日々の使用を想定する。</span></div></div>
 <div class="basic-item"><span class="check">3</span><div><b>お手入れ構造まで案内</b><br><span class="notice">乾燥性能を維持するために重要。</span></div></div>
 </div>
 </section>
 
-<section id="install" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">設置チェック</div></div>
+<section id="install" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">設置チェック</div><div class="ver-badge">Ver.1.5</div></div>
 <div class="card"><ul class="install-list">
 <li><b>搬入経路：</b>玄関・廊下・曲がり角・階段・洗面所入口</li>
 <li><b>防水パン：</b>内寸、排水口位置、かさ上げの要否</li>
@@ -378,7 +481,7 @@ button{cursor:pointer}
 <li><b>前方スペース：</b>ドア開閉＋洗濯物の出し入れ</li>
 <li><b>排水：</b>排水ホースの取り回し</li>
 </ul><p class="notice">実際の設置可否はメーカーの据付説明書・販売店の工事基準で最終確認してください。</p></div></section>
-<div class="footer">Ver.1.4 / 情報基準日 2026-08-12 / メーカー公式情報を基に作成</div>
+<div class="footer">Ver.1.5 / 情報基準日 2026-08-12 / メーカー公式情報を基に作成</div>
 </main>
 <script>
 let DB, quiz=[], qi=0, good=0, answered=false;
