@@ -148,6 +148,14 @@ button{cursor:pointer}
 .diagram-legend{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.legend-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border-radius:999px;background:#fff;border:1px solid #d9edf8;font-size:11px;font-weight:800}.legend-dot{width:9px;height:9px;border-radius:50%}
 .dry-summary{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}.dry-summary .mini{padding:10px;border-radius:14px;background:#f7fcff;border:1px solid #dceef8}.dry-summary b{display:block;font-size:12px;color:#0f5686}.dry-summary span{font-size:13px;font-weight:800}
 @media(min-width:720px){.dry-summary{grid-template-columns:repeat(4,1fr)}}
+
+.install-visual{display:grid;gap:12px}.install-card{background:linear-gradient(135deg,#fff,#f4fbff);border:1px solid var(--line);border-radius:22px;padding:15px;box-shadow:0 8px 22px rgba(44,113,153,.08)}
+.install-card h3{margin:0 0 8px}.install-svg{width:100%;height:auto;display:block;background:#fbfeff;border:1px solid #e2f0f8;border-radius:18px}
+.maint-grid{display:grid;gap:12px}.maint-card{background:white;border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 8px 22px rgba(44,113,153,.08)}
+@media(min-width:780px){.maint-grid{grid-template-columns:repeat(2,1fr)}.install-visual{grid-template-columns:repeat(2,1fr)}}
+.maint-head{display:flex;align-items:center;justify-content:space-between;gap:8px}.maint-brand{font-weight:900;font-size:20px}.maint-score{font-size:12px;font-weight:800;padding:6px 9px;border-radius:999px;background:#edf8ff;color:#126fae}
+.maint-flow{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin:11px 0}.maint-node{padding:8px 10px;border-radius:13px;background:#eff9ff;border:1px solid #d8edf8;font-size:12px;font-weight:800}.maint-arrow{color:#168df0;font-weight:900}
+.series-ladder{display:grid;gap:9px;margin-top:14px}.series-step{position:relative;padding:13px 14px 13px 52px;border-radius:18px;background:linear-gradient(135deg,#fafdff,#eef8ff);border:1px solid #dceef8}.series-step::before{content:attr(data-n);position:absolute;left:13px;top:13px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#168df0,#62c8f2);color:white;font-weight:900}.series-step b{display:block;font-size:15px}.series-step small{display:block;color:#678293;margin-top:3px;line-height:1.45}
 </style>
 
 </head>
@@ -158,7 +166,7 @@ button{cursor:pointer}
   <div class="hero-copy">
     <div class="logo">RISA EDITION</div>
     <h1>ドラム式洗濯機<br>販買マスター</h1>
-    <div class="edition">Risa Edition <span class="spark">✦</span></div><div class="ver-badge">Ver.1.5</div>
+    <div class="edition">Risa Edition <span class="spark">✦</span></div><div class="ver-badge">Ver.1.6</div>
     <p>知識をチカラに、提案を価値に。<br>お客様に最適な一台を。</p>
   </div>
   <img class="hero-img" src="icon-512.png" alt="">
@@ -172,6 +180,7 @@ button{cursor:pointer}
 <button class="menu" onclick="openSec('quiz')"><span class="mi">✏️</span><b>学習問題</b><span>ランダム問題で理解度チェック</span></button>
 <button class="menu" onclick="openSec('basics')"><span class="mi">🫧</span><b>ドラム基礎</b><span>容量・洗浄・乾燥の基本</span></button>
 <button class="menu" onclick="openSec('install')"><span class="mi">📋</span><b>設置チェック</b><span>搬入・防水パン・蛇口まで</span></button>
+<button class="menu" onclick="openSec('maintenance')"><span class="mi">🧹</span><b>お手入れ比較</b><span>5社のメンテ構造を図で比較</span></button>
 <button class="menu" onclick="openSec('dryviz')"><span class="mi">♨️</span><b>乾燥方式図解</b><span>ヒートポンプ等を図解で理解</span></button>
 <button class="menu" onclick="openSec('visuals')"><span class="mi">🗂️</span><b>図解で選ぶ</b><span>タイプ別に見やすく整理</span></button>
 </div>
@@ -187,11 +196,11 @@ button{cursor:pointer}
 </section>
 
 
-<section id="makers" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">メーカー攻略</div><div class="ver-badge">Ver.1.5</div></div><div id="makerCards"></div></section>
-<section id="compare" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">シリーズ比較</div><div class="ver-badge">Ver.1.5</div></div><div class="compareTabs" id="tabs"></div><div id="compareBody"></div></section>
+<section id="makers" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">メーカー攻略</div><div class="ver-badge">Ver.1.6</div></div><div id="makerCards"></div></section>
+<section id="compare" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">シリーズ比較</div><div class="ver-badge">Ver.1.6</div></div><div class="compareTabs" id="tabs"></div><div id="compareBody"></div></section>
 
 
-<section id="cross" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">5社徹底比較</div><div class="ver-badge">Ver.1.5</div></div>
+<section id="cross" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">5社徹底比較</div><div class="ver-badge">Ver.1.6</div></div>
 <div class="card"><b>比較の見方</b><p class="notice">メーカー全体を一括りにせず、代表上位モデルを軸に比較しています。機能が全機種共通でない場合は対象型番を明記しています。</p><div class="legend"><span class="pill">Panasonic＝省エネ・便利機能</span><span class="pill">東芝/日立＝7kg乾燥</span><span class="pill">日立＝らくメンテ</span><span class="pill">AQUA＝設置性</span></div></div>
 <div class="chart-card"><div class="chart-title">ひと目で分かる容量イメージ</div><div class="barcmp"><div class="barline"><div class="barlabel">6kg帯</div><div class="track"><div class="bar alt" style="width:85%"></div></div><div>パナ/SHARP/AQUA</div></div><div class="barline"><div class="barlabel">7kg帯</div><div class="track"><div class="bar" style="width:100%"></div></div><div>東芝/日立</div></div></div></div>
 <div id="crossBody"></div>
@@ -199,7 +208,7 @@ button{cursor:pointer}
 </section>
 
 
-<section id="visuals" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">図解で選ぶ</div><div class="ver-badge">Ver.1.5</div></div>
+<section id="visuals" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">図解で選ぶ</div><div class="ver-badge">Ver.1.6</div></div>
 <div class="card"><h3 style="margin-top:0">お客様タイプから選ぶ早見図</h3><p class="notice">文字を読む前に、まず「どんな使い方か」で候補を絞ると分かりやすい。</p><div id="diagramReco" class="visual-grid"></div></div>
 <div class="chart-card"><div class="chart-title">乾燥容量のイメージ比較</div><div class="barcmp">
 <div class="barline"><div class="barlabel">Panasonic</div><div class="track"><div class="bar" style="width:86%"></div></div><div>6kg</div></div>
@@ -219,7 +228,7 @@ button{cursor:pointer}
 <div class="simple-card"><div class="chart-title">迷った時の決め方 3ステップ</div><div class="flowbox"><span class="flowchip">① 置けるか確認</span><span class="flowarrow">→</span><span class="flowchip">② 乾燥頻度を確認</span><span class="flowarrow">→</span><span class="flowchip">③ お手入れの好みで絞る</span></div></div>
 </section>
 
-<section id="diagnose" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">接客ナビ</div><div class="ver-badge">Ver.1.5</div></div>
+<section id="diagnose" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">接客ナビ</div><div class="ver-badge">Ver.1.6</div></div>
 <div class="card diagnose">
 <p>お客様の希望を選ぶと、比較を始めやすいメーカーを表示します。</p>
 <label>一番重視すること</label><div class="choice" id="needs">
@@ -228,12 +237,12 @@ button{cursor:pointer}
 <label>乾燥は？</label><div class="choice" id="dryfreq"><button data-v="daily">ほぼ毎日</button><button data-v="sometimes">時々</button></div>
 <div id="diagResult"></div></div></section>
 
-<section id="quiz" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">学習問題</div><div class="ver-badge">Ver.1.5</div></div>
+<section id="quiz" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">学習問題</div><div class="ver-badge">Ver.1.6</div></div>
 <div class="card"><div class="score" id="score">0 / 0</div><div class="qnum" id="qnum"></div><div class="qtext" id="qtext"></div><div id="answers"></div><div class="explain" id="explain"></div><button class="next" id="next" onclick="nextQ()">次の問題</button></div></section>
 
 
 <section id="basics" class="section">
-<div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">ドラム基礎・乾燥方式</div><div class="ver-badge">Ver.1.5</div></div>
+<div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">ドラム基礎・乾燥方式</div><div class="ver-badge">Ver.1.6</div></div>
 
 <div class="card">
 <h3>まず覚える：乾燥方式は4つに分けて考える</h3>
@@ -391,7 +400,7 @@ button{cursor:pointer}
 
 
 <section id="dryviz" class="section">
-<div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">乾燥方式図解</div><div class="ver-badge">Ver.1.5</div></div>
+<div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">乾燥方式図解</div><div class="ver-badge">Ver.1.6</div></div>
 <div class="dryhero">
   <div class="logo">DRYING SYSTEM</div>
   <h2 style="font-family:Georgia,'Yu Mincho',serif;margin:6px 0;font-size:28px">仕組みの違いをやさしく理解</h2>
@@ -471,17 +480,26 @@ button{cursor:pointer}
 </div>
 </section>
 
-<section id="install" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">設置チェック</div><div class="ver-badge">Ver.1.5</div></div>
-<div class="card"><ul class="install-list">
-<li><b>搬入経路：</b>玄関・廊下・曲がり角・階段・洗面所入口</li>
-<li><b>防水パン：</b>内寸、排水口位置、かさ上げの要否</li>
-<li><b>蛇口：</b>高さ・位置。本体と干渉しないか</li>
-<li><b>本体寸法：</b>幅だけでなく奥行き・高さも確認</li>
-<li><b>ドア：</b>左開き/右開き、開けた時の壁・洗面台との干渉</li>
-<li><b>前方スペース：</b>ドア開閉＋洗濯物の出し入れ</li>
-<li><b>排水：</b>排水ホースの取り回し</li>
-</ul><p class="notice">実際の設置可否はメーカーの据付説明書・販売店の工事基準で最終確認してください。</p></div></section>
-<div class="footer">Ver.1.5 / 情報基準日 2026-08-12 / メーカー公式情報を基に作成</div>
+<section id="maintenance" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">お手入れ比較</div><div class="ver-badge">Ver.1.6</div></div>
+<div class="card"><h3 style="margin-top:0">「乾燥フィルター」だけで比べない</h3><p class="notice">見る場所は、乾燥フィルター・熱交換器・乾燥ダクト・糸くず・ドアパッキン。機種ごとに自動化範囲が違う。</p></div>
+<div class="maint-grid">
+<div class="maint-card"><div class="maint-head"><div class="maint-brand">Panasonic</div><span class="maint-score">機種差あり</span></div><div class="maint-flow"><span class="maint-node">乾燥経路</span><span class="maint-arrow">→</span><span class="maint-node">フィルター</span><span class="maint-arrow">→</span><span class="maint-node">槽ケア</span></div><p>上位ほど自動化・清潔機能が充実。LXシリーズ内でも機能差があるので型番で確認。</p></div>
+<div class="maint-card"><div class="maint-head"><div class="maint-brand">SHARP</div><span class="maint-score">型番確認</span></div><div class="maint-flow"><span class="maint-node">乾燥経路</span><span class="maint-arrow">→</span><span class="maint-node">清潔機能</span><span class="maint-arrow">→</span><span class="maint-node">機種別自動化</span></div><p>シリーズ内でお手入れ構造が異なる。最上位だけを全機種共通として説明しない。</p></div>
+<div class="maint-card"><div class="maint-head"><div class="maint-brand">東芝</div><span class="maint-score">自動化が多い</span></div><div class="maint-flow"><span class="maint-node">熱交換器自動洗浄</span><span class="maint-arrow">→</span><span class="maint-node">乾燥ダクト</span><span class="maint-arrow">→</span><span class="maint-node">ドアパッキン</span></div><p>複数箇所の自動お手入れを搭載する機種がある。XP5/XH5はバブルdeメンテも比較ポイント。</p></div>
+<div class="maint-card"><div class="maint-head"><div class="maint-brand">日立</div><span class="maint-score">らくメンテ</span></div><div class="maint-flow"><span class="maint-node">乾燥フィルターなし</span><span class="maint-arrow">→</span><span class="maint-node">大容量糸くずフィルター</span></div><p>毎回の乾燥フィルター掃除を減らせるのが大きな特徴。ただし「完全メンテ不要」ではない。</p></div>
+<div class="maint-card"><div class="maint-head"><div class="maint-brand">AQUA</div><span class="maint-score">自動おそうじ</span></div><div class="maint-flow"><span class="maint-node">乾燥フィルター</span><span class="maint-arrow">→</span><span class="maint-node">ドアパッキン</span><span class="maint-arrow">→</span><span class="maint-node">槽</span></div><p>DXS12Aなどは複数の自動おそうじ機能を搭載。モデルごとの差を確認して提案。</p></div>
+</div>
+<div class="talk"><b>接客の一言</b><br>「お手入れがラクか」は、掃除回数だけでなく<b>どこを自動で掃除してくれるか</b>まで見て比べると違いが伝わります。</div></section>
+<section id="install" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">設置チェック</div><div class="ver-badge">Ver.1.6</div></div>
+<div class="card"><h3 style="margin-top:0">設置は「本体サイズ」だけじゃない</h3><p class="notice">搬入→防水パン→蛇口→扉→前方スペースの順に見ると失敗しにくい。</p></div>
+<div class="install-visual">
+<div class="install-card"><h3>① 搬入経路</h3><svg class="install-svg" viewBox="0 0 540 250"><rect x="34" y="48" width="110" height="150" rx="14" fill="#e8f6ff" stroke="#68baf0" stroke-width="3"/><rect x="52" y="65" width="72" height="116" rx="10" fill="#fff" stroke="#9ccfee" stroke-width="2"/><text x="89" y="126" text-anchor="middle" font-size="23" fill="#17496a">玄関</text><path d="M150 124 H240" stroke="#168df0" stroke-width="7" marker-end="url(#arr1)"/><rect x="255" y="43" width="105" height="160" rx="16" fill="#fff" stroke="#6dbced" stroke-width="3"/><circle cx="307" cy="125" r="36" fill="#dff4ff" stroke="#168df0" stroke-width="4"/><text x="307" y="128" text-anchor="middle" font-size="18" fill="#17496a">本体</text><path d="M365 124 H458" stroke="#168df0" stroke-width="7" marker-end="url(#arr1)"/><rect x="464" y="55" width="45" height="135" rx="8" fill="#edf8ff" stroke="#88c7ed" stroke-width="2"/><text x="486" y="126" text-anchor="middle" font-size="16" fill="#17496a" transform="rotate(90 486 126)">洗面所入口</text><defs><marker id="arr1" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10z" fill="#168df0"/></marker></defs></svg><p class="notice">玄関幅だけでなく、廊下の曲がり角・階段・洗面所入口まで確認。</p></div>
+<div class="install-card"><h3>② 防水パン・排水口</h3><svg class="install-svg" viewBox="0 0 540 250"><rect x="80" y="62" width="300" height="125" rx="16" fill="#ecf8ff" stroke="#168df0" stroke-width="4"/><rect x="120" y="82" width="220" height="85" rx="10" fill="#fff" stroke="#b5def4" stroke-width="3"/><circle cx="350" cy="158" r="19" fill="#7ac8f2"/><text x="350" y="163" text-anchor="middle" font-size="13" fill="#fff">排水</text><line x1="80" y1="205" x2="380" y2="205" stroke="#17496a" stroke-width="2"/><line x1="80" y1="197" x2="80" y2="214" stroke="#17496a" stroke-width="2"/><line x1="380" y1="197" x2="380" y2="214" stroke="#17496a" stroke-width="2"/><text x="230" y="229" text-anchor="middle" font-size="17" fill="#17496a">内寸・排水口位置を確認</text></svg><p class="notice">脚が乗るか、排水口が本体と干渉しないか、かさ上げが必要かを見る。</p></div>
+<div class="install-card"><h3>③ 蛇口の高さ</h3><svg class="install-svg" viewBox="0 0 540 250"><rect x="190" y="60" width="205" height="145" rx="18" fill="#fff" stroke="#6dbced" stroke-width="3"/><circle cx="292" cy="135" r="45" fill="#def4ff" stroke="#168df0" stroke-width="4"/><path d="M110 62 h58 v25 h-30 v35" fill="none" stroke="#17496a" stroke-width="9" stroke-linecap="round"/><path d="M138 122 q0 28 0 44" stroke="#168df0" stroke-width="5" stroke-dasharray="7 7"/><text x="90" y="206" font-size="17" fill="#17496a">蛇口が本体上部と<br/>干渉しないか</text><line x1="170" y1="61" x2="170" y2="205" stroke="#f29a40" stroke-width="3" stroke-dasharray="8 7"/></svg><p class="notice">高さだけでなく、壁からの出っ張り・給水ホースの取り回しも確認。</p></div>
+<div class="install-card"><h3>④ ドア開閉スペース</h3><svg class="install-svg" viewBox="0 0 540 250"><rect x="85" y="48" width="180" height="165" rx="16" fill="#fff" stroke="#6dbced" stroke-width="3"/><circle cx="176" cy="132" r="55" fill="#e2f5ff" stroke="#168df0" stroke-width="4"/><path d="M230 132 A115 115 0 0 1 365 43" fill="none" stroke="#f29a40" stroke-width="5" stroke-dasharray="9 6"/><line x1="230" y1="132" x2="352" y2="55" stroke="#17496a" stroke-width="6"/><text x="359" y="57" font-size="18" fill="#17496a">開いた扉</text><rect x="402" y="48" width="50" height="166" fill="#eff6f9" stroke="#9fbecf" stroke-width="2"/><text x="426" y="137" text-anchor="middle" font-size="16" fill="#5b7483" transform="rotate(90 426 137)">壁・洗面台</text></svg><p class="notice">左開き/右開きだけでなく、開いた扉と壁・洗面台の干渉も確認。</p></div>
+</div>
+<div class="card"><h3 style="margin-top:0">最終チェック</h3><ul class="install-list"><li><b>前方スペース：</b>洗濯物を出し入れできる余裕</li><li><b>排水：</b>排水ホースの取り回し</li><li><b>高さ：</b>棚・窓・水栓との干渉</li></ul><p class="notice">実際の設置可否は対象機種の据付説明書・販売店の工事基準で最終確認してください。</p></div></section>
+<div class="footer">Ver.1.6 / 情報基準日 2026-08-12 / メーカー公式情報を基に作成</div>
 </main>
 <script>
 let DB, quiz=[], qi=0, good=0, answered=false;
@@ -498,7 +516,7 @@ AQUA:[['📏','コンパクト','奥行き重視で見やすい'],['🏠','設�
 function renderMakers(){document.getElementById('makerCards').innerHTML=DB.makers.map(m=>`<div class="card"><div class="makerHead"><span class="dot" style="background:${m.accent}"></span><div><h3>${m.name}</h3><div class="catch">${m.catch}</div></div></div><div>${m.best.map(x=>`<span class="pill">${x}</span>`).join('')}</div><div class="maker-visual"><div class="strengths">${(MAKER_VISUAL[m.name]||[]).map(s=>`<div class="strength"><div class="sicon">${s[0]}</div><b>${s[1]}</b><span>${s[2]}</span></div>`).join('')}</div><div class="brand-ladder"><div class="ladder-row"><b>選び方の順番</b><div class="steps"><span class="step">置けるか</span><span class="step">乾燥頻度</span><span class="step">容量</span><span class="step">お手入れ</span></div></div></div></div><ul class="points">${m.points.map(x=>`<li>${x}</li>`).join('')}</ul><div class="talk"><b>接客トーク</b><br>${m.talk}</div><p class="src">公式：<a href="${m.source}" target="_blank" rel="noopener">メーカー情報を確認</a></p></div>`).join('')}
 function renderDiagramReco(){document.getElementById('diagramReco').innerHTML=(DB.diagram_reco||[]).map(r=>`<div class="type-card"><div class="type-top"><div class="type-icon">${r.icon}</div><div><h3>${r.title}</h3><div class="notice">こんなお客様に</div></div></div><p>${r.text}</p><div class="tagrow">${r.tags.map(t=>`<span class="pill">${t}</span>`).join('')}</div></div>`).join('')}
 function renderTabs(){let t=document.getElementById('tabs');t.innerHTML=DB.makers.map((m,i)=>`<button class="tab ${i===0?'sel':''}" onclick="showCompare(${i},this)">${m.short}</button>`).join('');showCompare(0,t.children[0])}
-function showCompare(i,el){document.querySelectorAll('.tab').forEach(x=>x.classList.remove('sel'));if(el)el.classList.add('sel');let m=DB.makers[i];document.getElementById('compareBody').innerHTML=`<div class="card"><div class="makerHead"><span class="dot" style="background:${m.accent}"></span><div><h3>${m.name}</h3><div class="catch">${m.catch}</div></div></div><div style="margin-top:12px">${m.models.map(x=>`<div class="model"><b>${x[0]}　${x[1]}</b><small>${x[2]}</small><div>${x[3]}</div></div>`).join('')}</div><p class="notice">「機種仕様確認」とした項目は、販売時に現行カタログ・公式仕様表で必ず確認してください。</p></div>`}
+function showCompare(i,el){document.querySelectorAll('.tab').forEach(x=>x.classList.remove('sel'));if(el)el.classList.add('sel');let m=DB.makers[i];document.getElementById('compareBody').innerHTML=`<div class="card"><div class="makerHead"><span class="dot" style="background:${m.accent}"></span><div><h3>${m.name}</h3><div class="catch">${m.catch}</div></div></div><div class="series-ladder">${m.models.map((x,n)=>`<div class="series-step" data-n="${n+1}"><b>${x[0]}　${x[1]}</b><small>${x[2]}｜${x[3]}</small></div>`).join('')}</div><p class="notice">上から順に「上位→ベーシック」の目安。販売時は現行カタログ・公式仕様表で最終確認してください。</p></div>`}
 function renderCross(){
  const makers=['Panasonic','SHARP','東芝','日立','AQUA'];
  document.getElementById('crossBody').innerHTML=DB.cross_compare.map(r=>`<div class="crossrow"><div class="crossaxis">${r.axis}</div><div class="crossgrid">${makers.map(m=>`<div class="crosscell"><b>${m}</b>${r[m]}</div>`).join('')}</div></div>`).join('');
