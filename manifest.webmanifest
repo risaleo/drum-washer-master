@@ -3,8 +3,8 @@
   "short_name": "ドラム販買",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#f4f9fc",
-  "theme_color": "#eaf6ff",
+  "background_color": "#f4fbff",
+  "theme_color": "#eaf8ff",
   "icons": [
     {
       "src": "icon-192.png",

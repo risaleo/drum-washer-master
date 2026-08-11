@@ -6,47 +6,175 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-192.png">
 <title>ドラム式洗濯機 販買マスター</title>
-<style>
-:root{--bg:#f4f9fc;--card:#fff;--ink:#173042;--muted:#6f8491;--blue:#1676cf;--line:#dbe8ef;--good:#138b62;--bad:#d04646}
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;background:linear-gradient(180deg,#eaf7ff,#f7fafc 35%);color:var(--ink)}
-button,a{font:inherit}.wrap{max-width:920px;margin:auto;padding:18px 14px 90px}.hero{background:linear-gradient(135deg,#116ec4,#55b6df);border-radius:26px;padding:24px;color:white;box-shadow:0 14px 35px #267bb52e;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:180px;height:180px;border:24px solid #ffffff22;border-radius:50%;right:-55px;top:-45px}
-.logo{font-size:13px;font-weight:800;letter-spacing:.12em;opacity:.88}.hero h1{font-size:27px;margin:6px 0 4px}.hero p{margin:0;opacity:.9}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin:14px 0}.menu{border:0;background:var(--card);border-radius:19px;padding:18px 14px;text-align:left;box-shadow:0 7px 22px #204a6514;color:var(--ink)}.menu b{display:block;font-size:17px;margin-bottom:5px}.menu span{font-size:12px;color:var(--muted)}.section{display:none}.section.active{display:block}.topbar{display:flex;align-items:center;gap:10px;margin:4px 0 14px}.back{border:0;background:white;border-radius:13px;padding:10px 13px;box-shadow:0 3px 12px #22485d14}.title{font-weight:800;font-size:21px}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:17px;margin:10px 0;box-shadow:0 5px 20px #1a4c6c0c}.makerHead{display:flex;gap:12px;align-items:center}.dot{width:12px;height:42px;border-radius:10px}.makerHead h3{margin:0;font-size:21px}.catch{font-size:13px;color:var(--muted);margin-top:2px}.pill{display:inline-block;background:#edf7ff;color:#166bb2;padding:7px 10px;border-radius:99px;font-size:12px;font-weight:700;margin:4px 4px 0 0}.points{padding-left:20px;margin-bottom:4px}.points li{margin:8px 0;line-height:1.55}.model{border-top:1px solid var(--line);padding:11px 0}.model:first-child{border-top:0}.model b{display:block}.model small{color:var(--muted)}.talk{background:#f1f8fd;border-radius:14px;padding:13px;line-height:1.55;margin-top:10px}.src{font-size:12px;color:#607b8b}.src a{color:#1676cf}.diagnose label{display:block;font-weight:700;margin:15px 0 7px}.choice{display:flex;flex-wrap:wrap;gap:8px}.choice button{border:1px solid var(--line);background:white;border-radius:99px;padding:9px 12px}.choice button.sel{background:#1877cd;color:white;border-color:#1877cd}.result{margin-top:17px;padding:15px;background:#eef8ff;border-radius:16px}.qnum{font-size:12px;color:var(--muted);font-weight:700}.qtext{font-size:18px;font-weight:800;line-height:1.5;margin:7px 0 14px}.answer{width:100%;text-align:left;border:1px solid var(--line);background:white;padding:13px;border-radius:14px;margin:7px 0}.answer.correct{background:#e9f8f2;border-color:#67b99a}.answer.wrong{background:#fff0f0;border-color:#e08b8b}.explain{display:none;margin:12px 0;padding:13px;border-radius:14px;background:#f4f7f9;line-height:1.5}.next{border:0;background:#1676cf;color:white;border-radius:13px;padding:11px 17px;font-weight:800;display:none}.score{font-weight:800}.notice{font-size:12px;color:var(--muted);line-height:1.5}.compareTabs{display:flex;gap:7px;overflow:auto;padding-bottom:5px}.tab{white-space:nowrap;border:1px solid var(--line);background:white;border-radius:99px;padding:8px 11px}.tab.sel{background:#173f59;color:white}.fact{display:flex;gap:10px;padding:9px 0;border-top:1px solid var(--line)}.fact:first-child{border:0}.fact b{min-width:90px}.install-list li{margin:9px 0;line-height:1.5}.footer{font-size:11px;text-align:center;color:#8396a1;padding:20px}
-@media(min-width:700px){.grid{grid-template-columns:repeat(4,1fr)}.hero{padding:30px}.hero h1{font-size:34px}}
 
-.crossrow{background:white;border:1px solid var(--line);border-radius:18px;padding:14px;margin:10px 0}
-.crossaxis{font-weight:800;font-size:16px;margin-bottom:10px}
-.crossgrid{display:grid;grid-template-columns:repeat(5,minmax(145px,1fr));gap:8px;overflow:auto}
-.crosscell{background:#f7fafc;border-radius:12px;padding:10px;min-width:145px;line-height:1.4}
-.crosscell b{display:block;font-size:12px;color:#55717f;margin-bottom:5px}
-.warn{background:#fff8e8;border:1px solid #f0d494;border-radius:12px;padding:10px;margin:8px 0;font-size:13px;line-height:1.5}
+<style>
+:root{
+  --bg:#f4fbff;--ink:#0d2941;--muted:#6c8293;--blue:#168df0;--blue2:#59c8f2;
+  --aqua:#dff8ff;--line:#d9edf8;--card:#ffffff;--shadow:0 14px 36px rgba(42,119,165,.13);
+  --good:#138b62;--bad:#d04646;--gold:#d9a83e;
+}
+*{box-sizing:border-box}
+html{background:#eef9ff}
+body{
+ margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Hiragino Sans","Noto Sans JP",sans-serif;
+ color:var(--ink);background:
+ radial-gradient(circle at 8% 4%,rgba(95,204,247,.18),transparent 28%),
+ radial-gradient(circle at 95% 18%,rgba(21,141,240,.11),transparent 30%),
+ linear-gradient(180deg,#f8fdff 0%,#effaff 55%,#f8fdff 100%);
+ min-height:100vh;
+}
+button,a{font:inherit}
+button{cursor:pointer}
+.wrap{max-width:980px;margin:auto;padding:16px 14px 92px}
+.section{display:none}
+.section.active{display:block;animation:fade .22s ease}
+@keyframes fade{from{opacity:.2;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+.hero{
+ min-height:270px;border-radius:30px;padding:28px 26px;color:var(--ink);position:relative;overflow:hidden;
+ background:linear-gradient(135deg,rgba(255,255,255,.96),rgba(222,248,255,.92) 48%,rgba(172,226,255,.82));
+ border:1px solid rgba(105,196,242,.5);box-shadow:0 18px 46px rgba(39,136,191,.18);
+}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.8)}
+.hero::before{width:170px;height:170px;right:10%;top:-65px;box-shadow:0 0 50px rgba(255,255,255,.7)}
+.hero::after{width:90px;height:90px;right:-18px;bottom:15px}
+.hero-copy{position:relative;z-index:2;max-width:57%}
+.logo{font-size:12px;font-weight:900;letter-spacing:.18em;color:#188be9;text-transform:uppercase}
+.hero h1{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:31px;line-height:1.26;margin:9px 0 6px;letter-spacing:.02em}
+.hero .edition{font-family:Georgia,serif;font-style:italic;color:#1288ee;font-size:24px;margin:7px 0}
+.hero p{margin:6px 0 0;color:#3c6076;line-height:1.65;font-size:14px}
+.hero-img{position:absolute;right:-8px;bottom:-6px;width:44%;max-width:330px;filter:drop-shadow(0 18px 24px rgba(30,103,155,.18));border-radius:28px}
+.spark{color:var(--gold)}
+
+.home-title{display:flex;align-items:end;justify-content:space-between;margin:20px 3px 9px}
+.home-title b{font-size:17px}.home-title span{font-size:12px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0 0 16px}
+.menu{
+ min-height:122px;border:1px solid rgba(113,198,241,.38);background:rgba(255,255,255,.92);
+ border-radius:23px;padding:17px 15px;text-align:left;box-shadow:0 8px 24px rgba(47,117,157,.10);
+ color:var(--ink);position:relative;overflow:hidden;transition:.15s transform,.15s box-shadow;
+}
+.menu:active{transform:scale(.985)}
+.menu::after{content:"›";position:absolute;right:13px;bottom:12px;width:24px;height:24px;border-radius:50%;
+ display:grid;place-items:center;background:#ebf8ff;color:#148bef;font-weight:800}
+.menu .mi{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;margin-bottom:11px;
+ background:linear-gradient(145deg,#edfaff,#d9f2ff);box-shadow:inset 0 0 0 1px rgba(68,169,232,.23);font-size:22px}
+.menu b{display:block;font-size:16px;margin-bottom:4px}.menu span{font-size:11px;color:var(--muted);line-height:1.35;display:block;padding-right:22px}
+
+.basic-card{margin-top:4px;background:linear-gradient(135deg,#fff,#f3fbff);border:1px solid var(--line);border-radius:24px;
+ box-shadow:var(--shadow);overflow:hidden}
+.basic-head{padding:12px 17px;color:white;font-weight:800;background:linear-gradient(90deg,#188cf0,#5cc8f3);width:max-content;
+ border-radius:0 0 22px 0}
+.basic-list{padding:10px 17px 15px}
+.basic-item{display:flex;gap:11px;align-items:flex-start;padding:11px 0;border-bottom:1px dashed #cfe4ef}
+.basic-item:last-child{border-bottom:0}
+.check{width:25px;height:25px;flex:0 0 25px;border-radius:50%;display:grid;place-items:center;color:white;background:linear-gradient(145deg,#1a8ff0,#5dc8f2);font-weight:900}
+
+.topbar{display:flex;align-items:center;gap:12px;margin:2px 0 14px;position:sticky;top:0;z-index:5;padding:8px 0;
+ background:linear-gradient(180deg,rgba(244,251,255,.96),rgba(244,251,255,.78),transparent)}
+.back{border:1px solid #d5eaf6;background:rgba(255,255,255,.95);border-radius:50%;width:45px;height:45px;
+ box-shadow:0 5px 17px rgba(57,116,147,.13);font-size:24px;color:#0e4b76}
+.title{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-weight:800;font-size:23px}
+
+.card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:23px;padding:18px;margin:11px 0;
+ box-shadow:0 8px 26px rgba(41,114,153,.09)}
+.makerHead{display:flex;gap:12px;align-items:center}.dot{width:7px;height:45px;border-radius:10px}
+.makerHead h3{margin:0;font-size:22px}.catch{font-size:13px;color:var(--muted);margin-top:3px}
+.pill{display:inline-block;background:linear-gradient(180deg,#effaff,#e5f6ff);color:#116daf;padding:7px 10px;border-radius:99px;
+ font-size:12px;font-weight:800;margin:7px 5px 0 0;border:1px solid #d5eefb}
+.points{padding-left:20px;margin-bottom:5px}.points li{margin:8px 0;line-height:1.6}
+.model{border-top:1px solid var(--line);padding:12px 0}.model:first-child{border-top:0}.model b{display:block}.model small{color:#1879ba;font-weight:800}
+.talk{background:linear-gradient(135deg,#edf9ff,#f7fcff);border:1px solid #d8eef9;border-radius:16px;padding:14px;line-height:1.6;margin-top:11px}
+.src{font-size:12px;color:#607b8b}.src a{color:#1676cf}
+
+.compareTabs{display:flex;gap:8px;overflow:auto;padding:3px 1px 8px;scrollbar-width:none}
+.tab{white-space:nowrap;border:1px solid var(--line);background:white;border-radius:99px;padding:9px 13px;box-shadow:0 4px 13px rgba(43,116,153,.07)}
+.tab.sel{background:linear-gradient(90deg,#168bf0,#50c0ef);color:white;border-color:transparent}
+.fact{display:flex;gap:10px;padding:10px 0;border-top:1px solid var(--line)}.fact:first-child{border:0}.fact b{min-width:98px}
+.notice{font-size:12px;color:var(--muted);line-height:1.6}
+
+.crossrow{background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:21px;padding:15px;margin:11px 0;box-shadow:0 7px 22px rgba(36,107,148,.08)}
+.crossaxis{font-weight:900;font-size:16px;margin-bottom:11px;color:#0e4164}
+.crossgrid{display:grid;grid-template-columns:repeat(5,minmax(150px,1fr));gap:8px;overflow:auto;padding-bottom:4px}
+.crosscell{background:linear-gradient(180deg,#f9fdff,#eef9ff);border:1px solid #e2f1f8;border-radius:14px;padding:11px;min-width:150px;line-height:1.45}
+.crosscell b{display:block;font-size:12px;color:#1778b9;margin-bottom:6px}
+.warn{background:#fffaf0;border:1px solid #efdca8;border-radius:14px;padding:11px;margin:8px 0;font-size:13px;line-height:1.55}
+
+.diagnose label{display:block;font-weight:800;margin:15px 0 7px}.choice{display:flex;flex-wrap:wrap;gap:8px}
+.choice button{border:1px solid var(--line);background:white;border-radius:99px;padding:9px 12px}
+.choice button.sel{background:linear-gradient(90deg,#178cef,#51c2ef);color:white;border-color:transparent}
+.result{margin-top:17px;padding:15px;background:linear-gradient(135deg,#eefaff,#f8fdff);border:1px solid var(--line);border-radius:17px}
+
+.qnum{font-size:12px;color:var(--muted);font-weight:800}.qtext{font-size:18px;font-weight:900;line-height:1.5;margin:8px 0 14px}
+.answer{width:100%;text-align:left;border:1px solid var(--line);background:white;padding:14px;border-radius:15px;margin:7px 0;box-shadow:0 3px 10px rgba(42,112,151,.05)}
+.answer.correct{background:#e9f8f2;border-color:#67b99a}.answer.wrong{background:#fff0f0;border-color:#e08b8b}
+.explain{display:none;margin:12px 0;padding:14px;border-radius:15px;background:#f4f9fc;line-height:1.55}
+.next{border:0;background:linear-gradient(90deg,#168bf0,#50c1ef);color:white;border-radius:14px;padding:12px 18px;font-weight:900;display:none}
+.score{font-weight:900}
+
+.install-list li{margin:9px 0;line-height:1.55}
+.footer{font-size:11px;text-align:center;color:#8299a8;padding:24px 8px}
+.dryhero{background:linear-gradient(135deg,#effbff,#dcf5ff);border:1px solid #ccebf9;border-radius:24px;padding:18px;margin-bottom:12px;box-shadow:var(--shadow)}
+.drygrid{display:grid;gap:11px}
+.drycard{background:white;border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 8px 22px rgba(45,113,153,.08)}
+.drytitle{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:900}
+.num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:white;background:linear-gradient(145deg,#188bf0,#61caf1);font-weight:900}
+.flow{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:13px 0}
+.flow span{padding:8px 10px;border-radius:12px;background:#eef9ff;border:1px solid #d9edf8;font-size:12px;font-weight:800}
+.arrow{color:#1a8fee;font-weight:900}
+@media(min-width:700px){
+ .grid{grid-template-columns:repeat(4,1fr)}.hero{min-height:310px}.hero h1{font-size:38px}.hero-img{width:38%}
+}
 </style>
+
 </head>
 <body><main class="wrap">
+
 <section id="home" class="section active">
-<div class="hero"><div class="logo">RISA EDITION</div><h1>ドラム式洗濯機<br>販買マスター</h1><p>5社比較 × 接客 × 学習</p></div>
-<div class="grid">
-<button class="menu" onclick="openSec('makers')"><b>メーカー攻略</b><span>5社の強みを比較</span></button>
-<button class="menu" onclick="openSec('cross')"><b>5社徹底比較</b><span>容量・乾燥・洗浄・お手入れ</span></button>
-<button class="menu" onclick="openSec('compare')"><b>シリーズ比較</b><span>上位〜ベーシック</span></button>
-<button class="menu" onclick="openSec('diagnose')"><b>接客ナビ</b><span>お客様タイプから絞る</span></button>
-<button class="menu" onclick="openSec('quiz')"><b>学習問題</b><span>ランダム出題</span></button>
-<button class="menu" onclick="openSec('basics')"><b>ドラム基礎</b><span>乾燥・容量の基本</span></button>
-<button class="menu" onclick="openSec('install')"><b>設置チェック</b><span>失敗しない確認項目</span></button>
+<div class="hero">
+  <div class="hero-copy">
+    <div class="logo">RISA EDITION</div>
+    <h1>ドラム式洗濯機<br>販買マスター</h1>
+    <div class="edition">Risa Edition <span class="spark">✦</span></div>
+    <p>知識をチカラに、提案を価値に。<br>お客様に最適な一台を。</p>
+  </div>
+  <img class="hero-img" src="icon-512.png" alt="">
 </div>
-<div class="card"><b>販売の基本</b><p class="notice">メーカー名だけで優劣を断定せず、①設置できるか ②洗濯/乾燥容量 ③乾燥頻度 ④お手入れ ⑤洗浄・便利機能 ⑥予算 の順で比較すると提案しやすい。</p></div>
+
+<div class="home-title"><b>学ぶ・比較する</b><span>販売に必要なポイントをまとめて確認</span></div>
+<div class="grid">
+<button class="menu" onclick="openSec('makers')"><span class="mi">🏷️</span><b>メーカー攻略</b><span>5社の強み・違いを詳しく</span></button>
+<button class="menu" onclick="openSec('cross')"><span class="mi">⚖️</span><b>5社徹底比較</b><span>容量・乾燥・洗浄・お手入れ</span></button>
+<button class="menu" onclick="openSec('diagnose')"><span class="mi">💬</span><b>接客ナビ</b><span>お客様の希望から候補を絞る</span></button>
+<button class="menu" onclick="openSec('quiz')"><span class="mi">✏️</span><b>学習問題</b><span>ランダム問題で理解度チェック</span></button>
+<button class="menu" onclick="openSec('basics')"><span class="mi">🫧</span><b>ドラム基礎</b><span>容量・洗浄・乾燥の基本</span></button>
+<button class="menu" onclick="openSec('install')"><span class="mi">📋</span><b>設置チェック</b><span>搬入・防水パン・蛇口まで</span></button>
+<button class="menu" onclick="openSec('dryviz')"><span class="mi">♨️</span><b>乾燥方式図解</b><span>ヒートポンプ等を図解で理解</span></button>
+<button class="menu" onclick="openSec('diagnose')"><span class="mi">💡</span><b>おすすめ提案</b><span>用途別の提案ポイントを確認</span></button>
+</div>
+
+<div class="basic-card">
+  <div class="basic-head">✦ 販売の基本</div>
+  <div class="basic-list">
+    <div class="basic-item"><span class="check">✓</span><div><b>まず設置できるか確認</b><br><span class="notice">本体寸法だけでなく搬入・防水パン・蛇口・扉まで。</span></div></div>
+    <div class="basic-item"><span class="check">✓</span><div><b>乾燥の使用頻度を確認</b><br><span class="notice">毎日乾燥なら方式・電力量・時間が重要。</span></div></div>
+    <div class="basic-item"><span class="check">✓</span><div><b>お手入れまで比較</b><br><span class="notice">乾燥フィルター・熱交換器・ダクトなどの手間も案内。</span></div></div>
+  </div>
+</div>
 </section>
 
-<section id="makers" class="section"><div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">メーカー攻略</div></div><div id="makerCards"></div></section>
-<section id="compare" class="section"><div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">シリーズ比較</div></div><div class="compareTabs" id="tabs"></div><div id="compareBody"></div></section>
+
+<section id="makers" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">メーカー攻略</div></div><div id="makerCards"></div></section>
+<section id="compare" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">シリーズ比較</div></div><div class="compareTabs" id="tabs"></div><div id="compareBody"></div></section>
 
 
-<section id="cross" class="section"><div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">5社徹底比較</div></div>
+<section id="cross" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">5社徹底比較</div></div>
 <div class="card"><b>比較の見方</b><p class="notice">メーカー全体を一括りにせず、代表上位モデルを軸に比較しています。機能が全機種共通でない場合は対象型番を明記しています。</p></div>
 <div id="crossBody"></div>
 <div class="card"><h3>間違えやすいポイント</h3><div id="accuracyNotes"></div></div>
 </section>
 
-<section id="diagnose" class="section"><div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">接客ナビ</div></div>
+<section id="diagnose" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">接客ナビ</div></div>
 <div class="card diagnose">
 <p>お客様の希望を選ぶと、比較を始めやすいメーカーを表示します。</p>
 <label>一番重視すること</label><div class="choice" id="needs">
@@ -55,12 +183,12 @@ button,a{font:inherit}.wrap{max-width:920px;margin:auto;padding:18px 14px 90px}.
 <label>乾燥は？</label><div class="choice" id="dryfreq"><button data-v="daily">ほぼ毎日</button><button data-v="sometimes">時々</button></div>
 <div id="diagResult"></div></div></section>
 
-<section id="quiz" class="section"><div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">学習問題</div></div>
+<section id="quiz" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">学習問題</div></div>
 <div class="card"><div class="score" id="score">0 / 0</div><div class="qnum" id="qnum"></div><div class="qtext" id="qtext"></div><div id="answers"></div><div class="explain" id="explain"></div><button class="next" id="next" onclick="nextQ()">次の問題</button></div></section>
 
 
 <section id="basics" class="section">
-<div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">ドラム基礎・乾燥方式</div></div>
+<div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">ドラム基礎・乾燥方式</div></div>
 
 <div class="card">
 <h3>まず覚える：乾燥方式は4つに分けて考える</h3>
@@ -167,7 +295,42 @@ button,a{font:inherit}.wrap{max-width:920px;margin:auto;padding:18px 14px 90px}.
 </div>
 </section>
 
-<section id="install" class="section"><div class="topbar"><button class="back" onclick="home()">‹ 戻る</button><div class="title">設置チェック</div></div>
+
+<section id="dryviz" class="section">
+<div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">乾燥方式図解</div></div>
+<div class="dryhero">
+  <div class="logo">DRYING SYSTEM</div>
+  <h2 style="font-family:Georgia,'Yu Mincho',serif;margin:6px 0;font-size:28px">仕組みの違いをやさしく理解</h2>
+  <p class="notice">乾燥方式は「名前」だけでなく、空気と湿気がどう動くかで覚えると接客で説明しやすい。</p>
+</div>
+<div class="drygrid">
+  <div class="drycard">
+    <div class="drytitle"><span class="num">1</span>ヒートポンプ式</div>
+    <div class="flow"><span>湿った空気</span><b class="arrow">→</b><span>除湿・熱交換</span><b class="arrow">→</b><span>乾いた温風</span><b class="arrow">→</b><span>衣類へ循環</span></div>
+    <p>空気中の湿気を取り除き、熱を再利用しながら乾燥。比較的低温で、省エネ性を出しやすい。</p>
+    <div><span class="pill">省エネ</span><span class="pill">低温乾燥</span><span class="pill">衣類にやさしい</span></div>
+  </div>
+  <div class="drycard">
+    <div class="drytitle"><span class="num">2</span>ヒーター式（水冷除湿）</div>
+    <div class="flow"><span>湿った空気</span><b class="arrow">→</b><span>ヒーター加熱</span><b class="arrow">→</b><span>高温の温風</span><b class="arrow">→</b><span>冷却・排水</span></div>
+    <p>ヒーターで温風を作って乾燥。水冷除湿タイプでは、湿気を水に戻すため乾燥中にも冷却水を使う。</p>
+    <div><span class="pill">高温になりやすい</span><span class="pill">方式確認が重要</span></div>
+  </div>
+  <div class="drycard">
+    <div class="drytitle"><span class="num">3</span>ハイブリッド式</div>
+    <div class="flow"><span>ヒートポンプ</span><b class="arrow">＋</b><span>補助ヒーター</span><b class="arrow">→</b><span>状況に応じて制御</span></div>
+    <p>ヒートポンプを基本に、必要に応じてヒーターを組み合わせる方式。方式名だけでなく実際の電力量・時間で比較する。</p>
+    <div><span class="pill">ヒートポンプ＋補助</span><span class="pill">機種差を確認</span></div>
+  </div>
+</div>
+<div class="card"><h3 style="margin-top:0">接客ポイント</h3>
+<div class="basic-item"><span class="check">1</span><div><b>乾燥方式だけで決めない</b><br><span class="notice">方式は入口。容量・時間・電力量まで見る。</span></div></div>
+<div class="basic-item"><span class="check">2</span><div><b>毎日乾燥ならランニングコスト</b><br><span class="notice">本体価格だけでなく日々の使用を想定する。</span></div></div>
+<div class="basic-item"><span class="check">3</span><div><b>お手入れ構造まで案内</b><br><span class="notice">乾燥性能を維持するために重要。</span></div></div>
+</div>
+</section>
+
+<section id="install" class="section"><div class="topbar"><button class="back" onclick="home()">‹</button><div class="title">設置チェック</div></div>
 <div class="card"><ul class="install-list">
 <li><b>搬入経路：</b>玄関・廊下・曲がり角・階段・洗面所入口</li>
 <li><b>防水パン：</b>内寸、排水口位置、かさ上げの要否</li>
@@ -177,7 +340,7 @@ button,a{font:inherit}.wrap{max-width:920px;margin:auto;padding:18px 14px 90px}.
 <li><b>前方スペース：</b>ドア開閉＋洗濯物の出し入れ</li>
 <li><b>排水：</b>排水ホースの取り回し</li>
 </ul><p class="notice">実際の設置可否はメーカーの据付説明書・販売店の工事基準で最終確認してください。</p></div></section>
-<div class="footer">Ver.1.2 / 情報基準日 2026-08-10 / メーカー公式情報を基に作成</div>
+<div class="footer">Ver.1.3 / 情報基準日 2026-08-10 / メーカー公式情報を基に作成</div>
 </main>
 <script>
 let DB, quiz=[], qi=0, good=0, answered=false;
